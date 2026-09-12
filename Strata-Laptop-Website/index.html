@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Zone — Every layer, engineered on purpose.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span>Computer Zone</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="laptops.html">Laptops</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="search-wrap">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search laptops…">
+        <button class="search-btn" id="searchBtn" aria-label="Toggle search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html">Home</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="categories.html">Categories</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
+</div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow-line"><span class="dot"></span><span>Computer Zone Zero — now shipping</span></div>
+      <h1 class="hero-heading">
+        <span class="line"><span>Every layer,</span></span>
+        <span class="line"><span>engineered on purpose.</span></span>
+      </h1>
+      <p class="hero-desc">The Computer Zone Zero pairs aerospace-grade aluminum with a fanless cooling core, so power and silence finally sit in the same machine.</p>
+      <div class="hero-ctas">
+        <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
+        <a href="index.html#showcaseSection" class="btn btn-ghost">See it in motion</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+      <div class="cursor-glow" id="cursorGlow"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <canvas id="particles"></canvas>
+      <img class="dummy-laptop-image" src="assets/laptop-hero.jpg" alt="Dummy laptop product photo" width="900" height="675" loading="eager" fetchpriority="high" decoding="async">
+
+      <div class="laptop-stage" id="laptopStage">
+        <div class="laptop" id="laptop">
+          <div class="laptop-screen">
+            <div class="screen-glow"></div>
+            <div class="screen-ui">
+              <div class="ui-topbar"><span></span><span></span><span></span></div>
+              <div class="ui-row wide"></div>
+              <div class="ui-row"></div>
+              <div class="ui-grid">
+                <div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+        </div>
+        <div class="badge badge-1">22h battery life</div>
+        <div class="badge badge-2">2.8K OLED display</div>
+        <div class="badge badge-3">0dB fanless core</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span>Scroll</span>
+    <span class="chev"></span>
+  </div>
+</section>
+
+<section class="brand-intro">
+  <div class="wrap">
+    <p class="brand-statement" id="brandStatement">
+      Computer Zone started with a single question: why do powerful laptops have to sound like it.
+      <em>Five years of thermal engineering later, we shipped a machine that runs silent under full load.</em>
+    </p>
+    <div class="stats-row">
+      <div class="stat" data-count="0" data-unit="dB">
+        <div class="stat-num"><span class="num">0</span><span class="unit">dB</span></div>
+        <div class="stat-label">Fan noise at full load</div>
+      </div>
+      <div class="stat" data-count="22" data-unit="h">
+        <div class="stat-num"><span class="num">0</span><span class="unit">h</span></div>
+        <div class="stat-label">Battery life, mixed use</div>
+      </div>
+      <div class="stat" data-count="1.9" data-unit="kg">
+        <div class="stat-num"><span class="num">0</span><span class="unit">kg</span></div>
+        <div class="stat-label">Full-aluminum unibody</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     MODULE 2 — LAPTOP DISCOVERY & PRODUCT EXPERIENCE
+========================================================== -->
+
+<!-- 1. Featured Laptops -->
+<section class="laptops-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>A model for the way you actually work.</h2>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carPrev" aria-label="Previous laptop">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="carousel-btn" id="carNext" aria-label="Next laptop">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="carousel-track" id="carouselTrack">
+
+      <article class="product-card" style="--card-accent:#6e9bff" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <span class="card-tag">Fanless</span>
+          <div class="device-stage"><img class="product-image" src="assets/laptop-gaming.jpg" alt="Lenovo Legion 5 laptop" loading="lazy"></div>
+          <h3 class="product-name">Lenovo Legion 5</h3>
+          <p class="product-tagline">Performance laptop</p>
+          <div class="spec-grid">
+            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
+            <div class="spec-item">Memory<b>32GB</b></div>
+            <div class="spec-item">Storage<b>1TB SSD</b></div>
+            <div class="spec-item">Display<b>3.2K 120Hz</b></div>
+          </div>
+          <div class="card-footer">
+            <span class="price">$1,899<sup>USD</sup></span>
+            <a href="product.html" class="explore-link">Explore<span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" style="--card-accent:#7c6cff" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <span class="card-tag">Creator</span>
+          <div class="device-stage"><img class="product-image" src="assets/laptop-hero.jpg" alt="Dell XPS 16 laptop" loading="lazy"></div>
+          <h3 class="product-name">Dell XPS 16</h3>
+          <p class="product-tagline">Creator workstation</p>
+          <div class="spec-grid">
+            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
+            <div class="spec-item">Memory<b>64GB</b></div>
+            <div class="spec-item">Storage<b>2TB SSD</b></div>
+            <div class="spec-item">Display<b>4K OLED</b></div>
+          </div>
+          <div class="card-footer">
+            <span class="price">$2,399<sup>USD</sup></span>
+            <a href="laptops.html#dell-xps-16" class="explore-link">Explore<span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" style="--card-accent:#e0838a" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <span class="card-tag">Everyday</span>
+          <div class="device-stage"><img class="product-image" src="assets/laptop-hero.jpg" alt="MacBook Air laptop" loading="lazy"></div>
+          <h3 class="product-name">MacBook Air M3</h3>
+          <p class="product-tagline">Ultraportable laptop</p>
+          <div class="spec-grid">
+            <div class="spec-item">Processor<b>Core Ultra 5</b></div>
+            <div class="spec-item">Memory<b>16GB</b></div>
+            <div class="spec-item">Storage<b>512GB SSD</b></div>
+            <div class="spec-item">Display<b>2.8K 90Hz</b></div>
+          </div>
+          <div class="card-footer">
+            <span class="price">$1,199<sup>USD</sup></span>
+            <a href="laptops.html#macbook-air-m3" class="explore-link">Explore<span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" style="--card-accent:#3fb8ac" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <span class="card-tag">240Hz</span>
+          <div class="device-stage"><img class="product-image" src="assets/laptop-rog.jpg" alt="ASUS ROG Zephyrus G16 laptop" loading="lazy"></div>
+          <h3 class="product-name">ASUS ROG Zephyrus G16</h3>
+          <p class="product-tagline">Gaming performance</p>
+          <div class="spec-grid">
+            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
+            <div class="spec-item">Memory<b>32GB</b></div>
+            <div class="spec-item">Storage<b>1TB SSD</b></div>
+            <div class="spec-item">Display<b>240Hz QHD</b></div>
+          </div>
+          <div class="card-footer">
+            <span class="price">$2,199<sup>USD</sup></span>
+            <a href="laptops.html#asus-rog-zephyrus-g16" class="explore-link">Explore<span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" style="--card-accent:#d9a15b" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <span class="card-tag">Essentials</span>
+          <div class="device-stage"><img class="product-image" src="assets/laptop-hp.jpg" alt="HP Pavilion 15 laptop" loading="lazy"></div>
+          <h3 class="product-name">HP Pavilion 15</h3>
+          <p class="product-tagline">Student laptop</p>
+          <div class="spec-grid">
+            <div class="spec-item">Processor<b>Core Ultra 5</b></div>
+            <div class="spec-item">Memory<b>16GB</b></div>
+            <div class="spec-item">Storage<b>512GB SSD</b></div>
+            <div class="spec-item">Display<b>FHD+</b></div>
+          </div>
+          <div class="card-footer">
+            <span class="price">$899<sup>USD</sup></span>
+            <a href="laptops.html#hp-pavilion-15" class="explore-link">Explore<span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 2. Laptop Categories -->
+<section class="categories-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Find the shape built for your work.</h2>
+      <p>Every Computer Zone line shares the same aluminum unibody and fanless core — tuned differently for what you do with it.</p>
+    </div>
+
+    <div class="category-grid">
+      <a href="categories.html#gaming" class="category-card large reveal" data-reveal data-tilt-cat style="--cc:var(--cat-gaming)">
+        <img class="cat-image" src="assets/laptop-gaming.jpg" alt="Gaming laptop setup" loading="lazy">
+        <div class="cat-wash"></div>
+        <div class="cat-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 10h4M8 8v4M15 9h.01M18 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="2" y="6" width="20" height="12" rx="4" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <div class="cat-count">12 models</div>
+        <div class="cat-name">Gaming</div>
+      </a>
+
+      <a href="categories.html#creator" class="category-card tall reveal" data-reveal data-tilt-cat style="--cc:var(--cat-creator)">
+        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Creator laptop" loading="lazy">
+        <div class="cat-wash"></div>
+        <div class="cat-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="cat-count">8 models</div>
+        <div class="cat-name">Creator</div>
+      </a>
+
+      <a href="categories.html#business" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-business)">
+        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Business laptop" loading="lazy">
+        <div class="cat-wash"></div>
+        <div class="cat-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <div class="cat-count">6 models</div>
+        <div class="cat-name">Business</div>
+      </a>
+
+      <a href="categories.html#student" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-student)">
+        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Student laptop" loading="lazy">
+        <div class="cat-wash"></div>
+        <div class="cat-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 9l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <div class="cat-count">5 models</div>
+        <div class="cat-name">Student</div>
+      </a>
+
+      <a href="categories.html#ultrabook" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-ultrabook)">
+        <img class="cat-image" src="assets/laptop-hp.jpg" alt="Ultrabook laptop" loading="lazy">
+        <div class="cat-wash"></div>
+        <div class="cat-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 20h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="cat-count">7 models</div>
+        <div class="cat-name">Ultrabook</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Performance Section -->
+<section class="performance-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Specs that hold up under real work.</h2>
+      <p>The same configuration across the Computer Zone Zero line, benchmarked at full load.</p>
+    </div>
+
+    <div class="perf-grid">
+      <div class="perf-item" data-count="32">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 7V5M12 7V5M17 7V5M7 19v-2M12 19v-2M17 19v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">GB</span></div>
+        <div class="perf-label">Unified memory</div>
+      </div>
+      <div class="perf-item" data-count="2">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">TB</span></div>
+        <div class="perf-label">NVMe SSD storage</div>
+      </div>
+      <div class="perf-item" data-count="240">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">Hz</span></div>
+        <div class="perf-label">Display refresh rate</div>
+      </div>
+      <div class="perf-item" data-count="14">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="7" y="7" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 9v6M21 9v6M9 3h6M9 21h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">core</span></div>
+        <div class="perf-label">Processor cores</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Interactive Laptop Showcase (scroll-driven) -->
+<section class="showcase-section" id="showcaseSection">
+  <div class="showcase-sticky">
+    <div class="showcase-heading">
+      <h2>Watch it come together.</h2>
+      <p>Keep scrolling — this part reacts to you.</p>
+    </div>
+
+    <div class="showcase-stage">
+      <div class="showcase-laptop" id="showcaseLaptop">
+        <div class="sc-screen">
+          <div class="sc-face">
+            <div class="sc-active-glow"></div>
+            <div class="sc-topbar"><span></span><span></span><span></span></div>
+            <div class="sc-line w1"></div>
+            <div class="sc-line w2"></div>
+            <div class="sc-graph"></div>
+          </div>
+        </div>
+        <div class="sc-base"></div>
+
+        <div class="sc-spec sc-spec-1">Core Ultra 9 · 14 cores</div>
+        <div class="sc-spec sc-spec-2">3.2K · 120Hz OLED</div>
+        <div class="sc-spec sc-spec-3">0dB fanless cooling</div>
+        <div class="sc-spec sc-spec-4">22h battery life</div>
+      </div>
+    </div>
+
+    <div class="showcase-progress">
+      <span style="--p:var(--p1,0)"></span>
+      <span style="--p:var(--p2,0)"></span>
+      <span style="--p:var(--p3,0)"></span>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Features -->
+<section class="features-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Six decisions we didn't compromise on.</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Performance</h3>
+        <p>14-core processors tuned to sustain full clock speeds well past the first ten minutes of load.</p>
+      </div>
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Battery</h3>
+        <p>A 22-hour cell that's rated for mixed use, not a best-case idle screen with brightness at zero.</p>
+      </div>
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Display</h3>
+        <p>3.2K OLED at 120Hz, calibrated to within 1 Delta-E out of the box for color-accurate work.</p>
+      </div>
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>Cooling</h3>
+        <p>A vapor chamber and zero fans, so the chassis dissipates heat silently even under sustained load.</p>
+      </div>
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Design</h3>
+        <p>A single block of aluminum, milled rather than stamped, with no visible seams on the deck.</p>
+      </div>
+      <div class="feature-item reveal" data-reveal data-glow>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Build quality</h3>
+        <p>MIL-STD-810H tested for drops, dust, and pressure — the same standard we hold every hinge to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     MODULE 4 — PERFORMANCE & TECHNOLOGY
+========================================================== -->
+
+<!-- 4.3 Performance Introduction -->
+<section class="tech-intro" id="techIntro">
+  <div class="tech-grid-bg"></div>
+  <div class="tech-streak s1"></div>
+  <div class="tech-streak s2"></div>
+  <div class="tech-streak s3"></div>
+  <canvas id="techParticles"></canvas>
+
+  <div class="wrap tech-intro-content">
+    <div class="tech-intro-text reveal" data-reveal>
+      <div class="eyebrow-line" style="justify-content:center"><span class="dot"></span><span>Performance &amp; technology</span></div>
+      <h2 class="tech-intro-heading">Engineered to perform.<br>Power that moves with you.</h2>
+      <p class="tech-intro-sub">Built for demanding work, gaming, and creative workloads — without asking you to compromise on silence or size.</p>
+    </div>
+
+    <div class="tech-intro-laptop" id="techIntroLaptop">
+      <div class="laptop">
+        <div class="laptop-screen">
+          <div class="screen-glow"></div>
+          <div class="screen-ui">
+            <div class="ui-topbar"><span></span><span></span><span></span></div>
+            <div class="ui-row wide"></div>
+            <div class="ui-row"></div>
+            <div class="ui-grid"><div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div></div>
+          </div>
+        </div>
+        <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.4 Animated Performance Metrics -->
+<section class="metrics-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>The numbers behind the feel.</h2>
+      <p>Hover any metric for what it actually changes in day-to-day use.</p>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card" data-count="14">
+        <div class="metric-value"><span class="num">0</span><span class="u">core</span></div>
+        <div class="metric-label">Processor cores</div>
+        <div class="metric-desc">Enough parallel headroom to compile, render, and keep forty browser tabs open without a stutter.</div>
+      </div>
+      <div class="metric-card" data-count="32">
+        <div class="metric-value"><span class="num">0</span><span class="u">GB</span></div>
+        <div class="metric-label">Unified RAM</div>
+        <div class="metric-desc">Room for large creative files and multiple virtual machines to sit in memory at once.</div>
+      </div>
+      <div class="metric-card" data-count="2">
+        <div class="metric-value"><span class="num">0</span><span class="u">TB</span></div>
+        <div class="metric-label">NVMe storage</div>
+        <div class="metric-desc">Read speeds fast enough that loading a project feels the same as opening a text file.</div>
+      </div>
+      <div class="metric-card" data-count="240">
+        <div class="metric-value"><span class="num">0</span><span class="u">Hz</span></div>
+        <div class="metric-label">Display refresh</div>
+        <div class="metric-desc">Ultra-smooth motion for gaming and high-frame-rate video, with no visible tearing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.5 CPU / GPU Technology -->
+<section class="silicon-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Two chips, tuned to work as one.</h2>
+    </div>
+
+    <div class="silicon-split reveal" data-reveal>
+      <div class="silicon-panel cpu">
+        <div class="silicon-wash"></div>
+        <div class="silicon-kicker">CPU</div>
+        <h3 class="silicon-title">14-core processor</h3>
+        <div class="silicon-specs">
+          <div class="silicon-spec-row"><span>Core count</span><b>14 cores, 20 threads</b></div>
+          <div class="silicon-spec-row"><span>Clock speed</span><b>Up to 5.1GHz boost</b></div>
+          <div class="silicon-spec-row"><span>Multitasking</span><b>Handles 30+ apps at once</b></div>
+          <div class="silicon-spec-row"><span>AI processing</span><b>45 TOPS on-chip NPU</b></div>
+        </div>
+        <span class="silicon-more">Learn more<span class="arrow">→</span></span>
+      </div>
+      <div class="silicon-panel gpu">
+        <div class="silicon-wash"></div>
+        <div class="silicon-kicker">GPU</div>
+        <h3 class="silicon-title">RTX-class graphics</h3>
+        <div class="silicon-specs">
+          <div class="silicon-spec-row"><span>Graphics performance</span><b>16GB dedicated VRAM</b></div>
+          <div class="silicon-spec-row"><span>Ray tracing</span><b>3rd-gen RT cores</b></div>
+          <div class="silicon-spec-row"><span>Rendering</span><b>Up to 2.4x faster exports</b></div>
+          <div class="silicon-spec-row"><span>Gaming</span><b>240fps at QHD</b></div>
+        </div>
+        <span class="silicon-more">Learn more<span class="arrow">→</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.6 Display Technology -->
+<section class="display-section" id="displaySection">
+  <div class="display-sticky">
+    <h2 class="display-heading" id="displayHeading">See every detail.</h2>
+    <div class="display-frame" id="displayFrame">
+      <div class="display-screen">
+        <div class="display-ambient"></div>
+        <div class="display-product-wrap">
+          <img class="display-product" id="displayProduct" src="assets/laptop-hero.jpg" alt="Premium open laptop product" width="900" height="675" loading="lazy" decoding="async">
+        </div>
+        <div class="display-hotspots" id="displaySpecs">
+          <span class="display-hotspot hotspot-battery"><i></i>22h Battery Life</span>
+          <span class="display-hotspot hotspot-display"><i></i>2.8K OLED Display</span>
+          <span class="display-hotspot hotspot-weight"><i></i>1.2kg Lightweight</span>
+          <span class="display-hotspot hotspot-cooling"><i></i>Fanless Cooling Core</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.7 Cooling Technology -->
+<section class="cooling-section">
+  <div class="wrap cooling-grid">
+    <div class="cooling-copy">
+      <div class="section-head reveal" data-reveal style="margin-bottom:0;display:block;">
+        <h2>Airflow, engineered like a wind tunnel.</h2>
+        <p style="margin-top:14px;">No fans doesn't mean no cooling — it means the heat pipe network is doing all the work.</p>
+      </div>
+      <ul class="cooling-list reveal" data-reveal>
+        <li><span class="dot"></span><span><b>Vapor chamber:</b> spreads heat across the full chassis instead of one hot spot.</span></li>
+        <li><span class="dot"></span><span><b>Dual heat pipes:</b> carry warmth away from the CPU and GPU simultaneously.</span></li>
+        <li><span class="dot"></span><span><b>Passive exhaust:</b> heat exits through the hinge, with no moving parts to wear out.</span></li>
+      </ul>
+    </div>
+
+    <div class="cooling-visual" data-reveal-tilt>
+      <div class="cooling-label">Laptop internals</div>
+      <div class="cooling-diagram">
+        <div class="heat-block">CPU</div>
+        <div class="pipe"></div>
+        <div class="fan-wrap">
+          <svg class="fan" viewBox="0 0 66 66"><g class="blade"><ellipse cx="33" cy="18" rx="6" ry="14" fill="var(--accent-dim)"/><ellipse cx="33" cy="48" rx="6" ry="14" fill="var(--accent-dim)"/><ellipse cx="18" cy="33" rx="14" ry="6" fill="var(--accent-dim)"/><ellipse cx="48" cy="33" rx="14" ry="6" fill="var(--accent-dim)"/><circle cx="33" cy="33" r="5" fill="var(--accent)"/></g><circle cx="33" cy="33" r="31" stroke="var(--line)" stroke-width="1.5" fill="none"/></svg>
+          <span class="fan-label">Exhaust fan</span>
+        </div>
+        <div class="pipe"></div>
+        <div class="heat-block">GPU</div>
+      </div>
+      <div class="airflow-row">
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="exhaust-note">Airflow exits through the rear hinge vent</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.8 Battery & Connectivity -->
+<section class="strip-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Battery and connectivity, at a glance.</h2>
+    </div>
+
+    <div class="strip-grid">
+      <div class="strip-card" data-reveal>
+        <div class="strip-head"><span>Battery</span><span class="strip-value" style="font-size:15px;">18 hrs</span></div>
+        <div class="battery-shell"><div class="battery-fill"></div></div>
+      </div>
+
+      <div class="strip-card" data-reveal>
+        <div class="strip-head"><span>Wireless</span><span class="strip-value" style="font-size:15px;">Wi-Fi 7</span></div>
+        <div class="wifi-rings">
+          <svg width="70" height="46" viewBox="0 0 70 46">
+            <path class="ring r1" d="M35 40a10 10 0 0110-10" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path class="ring r2" d="M35 40a18 18 0 0118-18" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path class="ring r3" d="M35 40a26 26 0 0126-26" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <circle cx="35" cy="40" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="strip-card" data-reveal>
+        <div class="strip-head"><span>Connectivity</span><span class="strip-value" style="font-size:15px;">USB-C</span></div>
+        <div class="ports-row">
+          <div class="port-chip">Thunderbolt 5</div>
+          <div class="port-chip">HDMI 2.1</div>
+          <div class="port-chip">USB-C ×2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.9 Interactive Laptop Showcase — Module 4 hero -->
+<section class="power-showcase" id="powerShowcase">
+  <div class="power-sticky">
+    <div class="power-stage">
+      <div class="power-laptop" id="powerLaptop">
+        <div class="power-lid" id="powerLid">
+          <div class="power-screen"><div class="power-face"><div class="glow"></div></div></div>
+        </div>
+        <div class="power-base"></div>
+      </div>
+    </div>
+
+    <div class="power-panel">
+      <div class="power-steps">
+        <div class="power-step" data-step="0">
+          <div class="p-title">Performance</div>
+          <div class="p-desc">A 14-core processor built to sustain full clock speed well past the first ten minutes.</div>
+        </div>
+        <div class="power-step" data-step="1">
+          <div class="p-title">Graphics</div>
+          <div class="p-desc">RTX-class rendering with dedicated VRAM for real-time ray tracing and fast exports.</div>
+        </div>
+        <div class="power-step" data-step="2">
+          <div class="p-title">Display</div>
+          <div class="p-desc">A 240Hz OLED panel with a 1ms response time and full DCI-P3 color coverage.</div>
+        </div>
+        <div class="power-step" data-step="3">
+          <div class="p-title">Cooling</div>
+          <div class="p-desc">Dual heat pipes and a vapor chamber keep everything silent — zero fans, zero noise.</div>
+        </div>
+        <div class="power-step" data-step="4">
+          <div class="p-title">Battery</div>
+          <div class="p-desc">18 hours of real, mixed use — video calls, code, and creative tools included.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4.10 Technology Summary -->
+<section class="summary-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Every spec, in one place.</h2>
+    </div>
+    <div class="summary-grid">
+      <div class="summary-item" data-reveal><div class="summary-label">Processor</div><div class="summary-value">14-Core</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Graphics</div><div class="summary-value">RTX GPU</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Memory</div><div class="summary-value">32GB</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Storage</div><div class="summary-value">2TB SSD</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Display</div><div class="summary-value">240Hz OLED</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Battery</div><div class="summary-value">18 Hours</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Connectivity</div><div class="summary-value">Wi-Fi 7</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Build</div><div class="summary-value">Aluminum unibody</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     MODULE 3 — TRUST, CTA & FOOTER EXPERIENCE
+========================================================== -->
+
+<!-- 1. Why Choose Us -->
+<section class="why-section">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal>
+      <h2>Why people switch to Computer Zone.</h2>
+      <p>Six decisions that show up the first week you own one, not just on a spec sheet.</p>
+    </div>
+
+    <div class="why-list">
+      <div class="why-item" data-reveal>
+        <span class="why-index">01</span>
+        <span class="why-title">Premium performance</span>
+        <span class="why-desc">14-core processors that hold their clock speed under sustained, real workloads.</span>
+      </div>
+      <div class="why-item" data-reveal>
+        <span class="why-index">02</span>
+        <span class="why-title">Latest technology</span>
+        <span class="why-desc">Thunderbolt 5, Wi-Fi 7, and the newest silicon, shipped the same quarter it's ready.</span>
+      </div>
+      <div class="why-item" data-reveal>
+        <span class="why-index">03</span>
+        <span class="why-title">Exceptional display</span>
+        <span class="why-desc">3.2K OLED panels calibrated to within 1 Delta-E, straight out of the box.</span>
+      </div>
+      <div class="why-item" data-reveal>
+        <span class="why-index">04</span>
+        <span class="why-title">Long battery life</span>
+        <span class="why-desc">22 hours of mixed use — rated with the screen on and real applications running.</span>
+      </div>
+      <div class="why-item" data-reveal>
+        <span class="why-index">05</span>
+        <span class="why-title">Reliable build</span>
+        <span class="why-desc">A single block of milled aluminum, MIL-STD-810H tested for drops, dust, and pressure.</span>
+      </div>
+      <div class="why-item" data-reveal>
+        <span class="why-index">06</span>
+        <span class="why-title">Premium experience</span>
+        <span class="why-desc">Support that picks up, a two-year warranty as standard, and firmware updates for six years.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Brand / Ecosystem Marquee -->
+<section class="marquee-section">
+  <div class="wrap marquee-head">
+    <h2>Plays well with the setup you already have.</h2>
+    <p>Standard ports and display protocols mean Computer Zone slots in next to hardware from any of these brands.</p>
+  </div>
+
+  <div class="marquee-fade">
+    <div class="marquee-row">
+      <div class="marquee-track">
+        <span>ASUS</span><span>LENOVO</span><span>HP</span><span>DELL</span><span>ACER</span><span>MSI</span><span>APPLE</span><span>RAZER</span>
+        <span>ASUS</span><span>LENOVO</span><span>HP</span><span>DELL</span><span>ACER</span><span>MSI</span><span>APPLE</span><span>RAZER</span>
+      </div>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track reverse">
+        <span>RAZER</span><span>APPLE</span><span>MSI</span><span>ACER</span><span>DELL</span><span>HP</span><span>LENOVO</span><span>ASUS</span>
+        <span>RAZER</span><span>APPLE</span><span>MSI</span><span>ACER</span><span>DELL</span><span>HP</span><span>LENOVO</span><span>ASUS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Final CTA -->
+<section class="cta-section" id="ctaSection">
+  <div class="cta-bg-blob cta-blob-1"></div>
+  <div class="cta-bg-blob cta-blob-2"></div>
+  <canvas id="ctaParticles"></canvas>
+  <div class="cta-laptop-wrap">
+    <div class="laptop cta-laptop">
+      <div class="laptop-screen">
+        <div class="screen-glow"></div>
+        <div class="screen-ui">
+          <div class="ui-topbar"><span></span><span></span><span></span></div>
+          <div class="ui-row wide"></div>
+          <div class="ui-row"></div>
+          <div class="ui-grid"><div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div></div>
+        </div>
+      </div>
+      <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+    </div>
+  </div>
+
+  <div class="wrap cta-content">
+    <div class="cta-eyebrow"><span class="dot"></span><span>Free shipping, every order</span></div>
+    <h2 class="cta-heading">Ready to upgrade<br>your setup?</h2>
+    <div class="cta-buttons">
+      <a href="laptops.html" class="btn btn-primary btn-lg">Explore laptops</a>
+      <a href="categories.html" class="btn btn-ghost btn-lg">View collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span>Computer Zone</a>
+        <p>Premium, fanless computing — engineered as one unibody, from the hinge to the heatsink.</p>
+        <div class="footer-social">
+          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="categories.html#gaming">Gaming</a></li>
+          <li><a href="categories.html#business">Business</a></li>
+          <li><a href="categories.html#creator">Creator</a></li>
+          <li><a href="categories.html#student">Student</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#support">Support</a></li>
+          <li><a href="contact.html#privacy">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Computer Zone. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="contact.html#terms">Terms</a>
+        <a href="contact.html#privacy">Privacy</a>
+        <a href="contact.html#cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+  /* Navbar scroll state */
+  const navbar = document.getElementById('navbar');
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const fade = Math.max(0, 1 - window.scrollY / 200);
+    scrollIndicator.style.opacity = fade;
+    scrollIndicator.style.pointerEvents = fade <= 0.05 ? 'none' : 'auto';
+  });
+
+  /* Search toggle */
+  const searchBtn = document.getElementById('searchBtn');
+  const searchInput = document.getElementById('searchInput');
+  searchBtn.addEventListener('click', () => {
+    searchInput.classList.toggle('open');
+    if (searchInput.classList.contains('open')) searchInput.focus();
+  });
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    const query = searchInput.value.trim();
+    window.location.href = query ? `laptops.html?search=${encodeURIComponent(query)}` : 'laptops.html';
+  });
+
+  /* Mobile menu */
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobilePanel.classList.toggle('open');
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobilePanel.classList.remove('open');
+  }));
+
+  /* Mouse parallax: laptop tilt + cursor glow + badge drift */
+  const heroVisual = document.getElementById('heroVisual');
+  const laptop = document.getElementById('laptop');
+  const cursorGlow = document.getElementById('cursorGlow');
+  const badges = document.querySelectorAll('.badge');
+
+  if (!isTouch && !reduceMotion) {
+    heroVisual.addEventListener('mousemove', (e) => {
+      const rect = heroVisual.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      laptop.style.setProperty('--ry', (x * 16 + 10) + 'deg');
+      laptop.style.setProperty('--rx', (-y * 12 - 6) + 'deg');
+
+      cursorGlow.style.transform = `translate(${e.clientX - rect.left - 130}px, ${e.clientY - rect.top - 130}px)`;
+
+      badges.forEach((b, i) => {
+        const factor = 10 + i * 6;
+        b.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+      });
+    });
+    heroVisual.addEventListener('mouseleave', () => {
+      laptop.style.setProperty('--ry', '10deg');
+      laptop.style.setProperty('--rx', '-8deg');
+      cursorGlow.style.transform = 'translate(-1000px,-1000px)';
+      badges.forEach(b => b.style.transform = 'translate(0,0)');
+    });
+  }
+
+  /* Ambient particle field */
+  const canvas = document.getElementById('particles');
+  if (canvas && !reduceMotion && window.innerWidth > 640) {
+    const ctx = canvas.getContext('2d');
+    let w, h, particles;
+
+    function resize() {
+      w = canvas.width = heroVisual.clientWidth;
+      h = canvas.height = heroVisual.clientHeight;
+    }
+    function init() {
+      particles = Array.from({ length: 34 }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.4 + 0.4,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: (Math.random() - 0.5) * 0.15,
+        a: Math.random() * 0.5 + 0.15
+      }));
+    }
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(140,170,255,${p.a})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    resize(); init(); tick();
+    window.addEventListener('resize', () => { resize(); init(); });
+  }
+
+  /* Scroll-triggered brand intro reveal + count-up */
+  const statement = document.getElementById('brandStatement');
+  const stats = document.querySelectorAll('.stat');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      if (entry.target.classList.contains('stat')) {
+        animateCount(entry.target);
+      }
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.35 });
+
+  io.observe(statement);
+  stats.forEach(s => io.observe(s));
+
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.count);
+    const numEl = el.querySelector('.num');
+    const isDecimal = target % 1 !== 0;
+    const duration = 1100;
+    const start = performance.now();
+
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = target * eased;
+      numEl.textContent = isDecimal ? val.toFixed(1) : Math.round(val);
+      if (t < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ==========================================================
+     MODULE 2 JS
+  ========================================================== */
+
+  /* Generic scroll-reveal for section heads / cards / features */
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (!entry.isIntersecting) return;
+      setTimeout(() => entry.target.classList.add('in-view'), i * 60);
+      revealIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealIO.observe(el));
+
+  /* Featured Laptops: drag-to-scroll + arrow controls */
+  const track = document.getElementById('carouselTrack');
+  const carPrev = document.getElementById('carPrev');
+  const carNext = document.getElementById('carNext');
+  if (track) {
+    let isDown = false, startX, scrollLeft;
+    track.addEventListener('pointerdown', (e) => {
+      isDown = true; track.classList.add('dragging');
+      startX = e.pageX; scrollLeft = track.scrollLeft;
+    });
+    ['pointerup', 'pointerleave'].forEach(evt =>
+      track.addEventListener(evt, () => { isDown = false; track.classList.remove('dragging'); })
+    );
+    track.addEventListener('pointermove', (e) => {
+      if (!isDown) return;
+      track.scrollLeft = scrollLeft - (e.pageX - startX);
+    });
+    const cardWidth = 342;
+    carNext?.addEventListener('click', () => track.scrollBy({ left: cardWidth, behavior: 'smooth' }));
+    carPrev?.addEventListener('click', () => track.scrollBy({ left: -cardWidth, behavior: 'smooth' }));
+  }
+
+  /* 3D tilt on product cards + category cards, with cursor glow position */
+  function attachTilt(el, strength = 8) {
+    const inner = el.querySelector('.card-inner') || el;
+    el.addEventListener('mousemove', (e) => {
+      if (isTouch || reduceMotion) return;
+      const rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      const rx = (0.5 - py) * strength;
+      const ry = (px - 0.5) * strength;
+      inner.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+      el.style.setProperty('--gx', `${px * 100}%`);
+      el.style.setProperty('--gy', `${py * 100}%`);
+      el.style.setProperty('--fx', `${px * 100}%`);
+      el.style.setProperty('--fy', `${py * 100}%`);
+    });
+    el.addEventListener('mouseleave', () => { inner.style.transform = ''; });
+  }
+  document.querySelectorAll('[data-tilt]').forEach(el => attachTilt(el, 6));
+  document.querySelectorAll('[data-tilt-cat]').forEach(el => attachTilt(el, 4));
+  document.querySelectorAll('[data-glow]').forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--fx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+      el.style.setProperty('--fy', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+    });
+  });
+
+  /* Performance counters */
+  const perfItems = document.querySelectorAll('.perf-item');
+  const perfIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      animateCount(entry.target);
+      perfIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.35 });
+  perfItems.forEach(el => perfIO.observe(el));
+
+  /* Interactive Laptop Showcase — scroll-driven timeline */
+  const showcaseSection = document.getElementById('showcaseSection');
+  const showcaseLaptop = document.getElementById('showcaseLaptop');
+  const progressBars = document.querySelectorAll('.showcase-progress span');
+
+  function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function updateShowcase() {
+    const rect = showcaseSection.getBoundingClientRect();
+    const total = showcaseSection.offsetHeight - window.innerHeight;
+    const progress = clamp01(-rect.top / total);
+
+    // Stage 1 (0 - 0.28): laptop appears + rotates in
+    // Stage 2 (0.28 - 0.55): screen activates, specs begin appearing
+    // Stage 3 (0.55 - 0.8): camera zoom in
+    // Stage 4 (0.8 - 1): settle, full feature highlight
+    const s1 = clamp01(progress / 0.28);
+    const s2 = clamp01((progress - 0.28) / 0.27);
+    const s3 = clamp01((progress - 0.55) / 0.25);
+    const s4 = clamp01((progress - 0.8) / 0.2);
+
+    const opacity = s1;
+    const rotY = lerp(-35, 0, s1) + lerp(0, 8, s3) * (1 - s4);
+    const rotX = lerp(4, -2, s1);
+    const scale = lerp(0.7, 1, s1) * lerp(1, 1.18, s3) * lerp(1, 1.05, s4);
+
+    showcaseLaptop.style.setProperty('--sc-opacity', opacity);
+    showcaseLaptop.style.setProperty('--sc-roty', rotY + 'deg');
+    showcaseLaptop.style.setProperty('--sc-rotx', rotX + 'deg');
+    showcaseLaptop.style.setProperty('--sc-scale', scale);
+    showcaseLaptop.style.setProperty('--sc-screen-on', s2);
+    showcaseLaptop.style.setProperty('--sc-specs', Math.max(s3, s4));
+
+    document.querySelector('.showcase-heading').style.setProperty('--show-heading', progress > 0.92 ? 0 : 1);
+
+    progressBars[0]?.style.setProperty('--p1', s1);
+    progressBars[1]?.style.setProperty('--p2', s2);
+    progressBars[2]?.style.setProperty('--p3', Math.max(s3, s4));
+  }
+
+  if (showcaseSection) {
+    if (reduceMotion) {
+      showcaseLaptop.style.setProperty('--sc-opacity', 1);
+      showcaseLaptop.style.setProperty('--sc-roty', '0deg');
+      showcaseLaptop.style.setProperty('--sc-scale', 1);
+      showcaseLaptop.style.setProperty('--sc-screen-on', 1);
+      showcaseLaptop.style.setProperty('--sc-specs', 1);
+    } else {
+      window.addEventListener('scroll', updateShowcase, { passive: true });
+      window.addEventListener('resize', updateShowcase);
+      updateShowcase();
+    }
+  }
+
+  /* ==========================================================
+     MODULE 3 JS
+  ========================================================== */
+
+  /* Final CTA: reveal eyebrow/heading/buttons together when in view */
+  const ctaSection = document.getElementById('ctaSection');
+  if (ctaSection) {
+    const ctaIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in-view');
+        ctaIO.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+    ctaIO.observe(ctaSection);
+  }
+
+  /* Final CTA ambient particles (same technique as hero) */
+  const ctaCanvas = document.getElementById('ctaParticles');
+  if (ctaCanvas && !reduceMotion && window.innerWidth > 640) {
+    const ctx2 = ctaCanvas.getContext('2d');
+    let cw, ch, cparticles;
+
+    function ctaResize() {
+      cw = ctaCanvas.width = ctaSection.clientWidth;
+      ch = ctaCanvas.height = ctaSection.clientHeight;
+    }
+    function ctaInit() {
+      cparticles = Array.from({ length: 46 }, () => ({
+        x: Math.random() * cw,
+        y: Math.random() * ch,
+        r: Math.random() * 1.5 + 0.4,
+        vx: (Math.random() - 0.5) * 0.12,
+        vy: (Math.random() - 0.5) * 0.12,
+        a: Math.random() * 0.45 + 0.1
+      }));
+    }
+    function ctaTick() {
+      ctx2.clearRect(0, 0, cw, ch);
+      cparticles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = cw; if (p.x > cw) p.x = 0;
+        if (p.y < 0) p.y = ch; if (p.y > ch) p.y = 0;
+        ctx2.beginPath();
+        ctx2.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx2.fillStyle = `rgba(140,170,255,${p.a})`;
+        ctx2.fill();
+      });
+      requestAnimationFrame(ctaTick);
+    }
+    ctaResize(); ctaInit(); ctaTick();
+    window.addEventListener('resize', () => { ctaResize(); ctaInit(); });
+  }
+
+  /* ==========================================================
+     MODULE 4 JS
+  ========================================================== */
+
+  /* 4.3 Performance intro: laptop scale + slow bg parallax on scroll */
+  const techIntro = document.getElementById('techIntro');
+  const techIntroLaptopEl = techIntro?.querySelector('.laptop');
+  const techGridBg = techIntro?.querySelector('.tech-grid-bg');
+
+  function updateTechIntro() {
+    if (!techIntro || !techIntroLaptopEl) return;
+    const rect = techIntro.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const p = clamp01((vh - rect.top) / (vh * 0.9));
+    techIntroLaptopEl.style.setProperty('--tl-scale', lerp(0.8, 1, p));
+    if (techGridBg && !reduceMotion) techGridBg.style.transform = `translateY(${rect.top * 0.05}px)`;
+  }
+  window.addEventListener('scroll', updateTechIntro, { passive: true });
+  updateTechIntro();
+
+  /* 4.3 ambient particles behind the intro */
+  const techCanvas = document.getElementById('techParticles');
+  if (techCanvas && !reduceMotion && window.innerWidth > 640) {
+    const tctx = techCanvas.getContext('2d');
+    let tw, th, tparticles;
+    function tResize() { tw = techCanvas.width = techIntro.clientWidth; th = techCanvas.height = techIntro.clientHeight; }
+    function tInit() {
+      tparticles = Array.from({ length: 40 }, () => ({
+        x: Math.random() * tw, y: Math.random() * th,
+        r: Math.random() * 1.3 + 0.4,
+        vx: (Math.random() - 0.5) * 0.1, vy: (Math.random() - 0.5) * 0.1,
+        a: Math.random() * 0.4 + 0.1
+      }));
+    }
+    function tTick() {
+      tctx.clearRect(0, 0, tw, th);
+      tparticles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = tw; if (p.x > tw) p.x = 0;
+        if (p.y < 0) p.y = th; if (p.y > th) p.y = 0;
+        tctx.beginPath(); tctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        tctx.fillStyle = `rgba(140,170,255,${p.a})`; tctx.fill();
+      });
+      requestAnimationFrame(tTick);
+    }
+    tResize(); tInit(); tTick();
+    window.addEventListener('resize', () => { tResize(); tInit(); });
+  }
+
+  /* 4.4 Metric cards: counter + reveal on view */
+  const metricCards = document.querySelectorAll('.metric-card');
+  const metricIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      animateCount(entry.target);
+      metricIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+  metricCards.forEach(el => metricIO.observe(el));
+
+  /* 4.7 Cooling visual: reveal (closed → open) on view */
+  const coolingVisual = document.querySelector('[data-reveal-tilt]');
+  if (coolingVisual) {
+    const coolIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in-view');
+        coolIO.unobserve(entry.target);
+      });
+    }, { threshold: 0.25 });
+    coolIO.observe(coolingVisual);
+  }
+
+  /* 4.6 Display Technology: scroll-driven zoom + brightness + specs, cursor parallax */
+  const displaySection = document.getElementById('displaySection');
+  const displayFrame = document.getElementById('displayFrame');
+  const displayHeading = document.getElementById('displayHeading');
+  const displaySpecs = document.getElementById('displaySpecs');
+  const displayProduct = document.getElementById('displayProduct');
+  let displayIsSpinning = false;
+
+  function updateDisplay() {
+    const rect = displaySection.getBoundingClientRect();
+    const total = displaySection.offsetHeight - window.innerHeight;
+    const progress = clamp01(-rect.top / total);
+    const zoomP = clamp01(progress / 0.6);
+    const specP = clamp01((progress - 0.55) / 0.35);
+
+    displayFrame.style.setProperty('--df-scale', lerp(0.72, 1.3, zoomP));
+    displayFrame.style.setProperty('--df-brightness', lerp(0.5, 1.1, zoomP));
+    displaySpecs.style.setProperty('--ds-opacity', specP);
+    displayHeading.style.setProperty('--dh-opacity', 1 - zoomP * 0.85);
+  }
+
+  if (displaySection) {
+    if (reduceMotion) {
+      displayFrame.style.setProperty('--df-scale', 1.15);
+      displayFrame.style.setProperty('--df-brightness', 1.05);
+      displaySpecs.style.setProperty('--ds-opacity', 1);
+    } else {
+      window.addEventListener('scroll', updateDisplay, { passive: true });
+      window.addEventListener('resize', updateDisplay);
+      updateDisplay();
+
+      displayFrame.addEventListener('mousemove', (e) => {
+        if (isTouch) return;
+        const r = displayFrame.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        displayProduct.style.transform = `translate(${x * 16}px, ${y * 16}px) rotateX(${4 - y * 5}deg) rotateY(${-8 + x * 10}deg)`;
+      });
+      displayFrame.addEventListener('mouseleave', () => { displayProduct.style.transform = ''; });
+    }
+
+    displayProduct.addEventListener('click', () => {
+      if (reduceMotion || displayIsSpinning) return;
+      displayIsSpinning = true;
+      displayProduct.classList.add('is-spinning');
+    });
+    displayProduct.addEventListener('animationend', (event) => {
+      if (event.animationName !== 'displayLaptopSpin') return;
+      displayProduct.classList.remove('is-spinning');
+      displayProduct.style.transform = '';
+      displayIsSpinning = false;
+    });
+  }
+
+  /* 4.9 Interactive Laptop Showcase: sticky laptop opens, steps highlight */
+  const powerShowcase = document.getElementById('powerShowcase');
+  const powerLaptop = document.getElementById('powerLaptop');
+  const powerSteps = document.querySelectorAll('.power-step');
+  const powerBreakpoints = [0.20, 0.38, 0.56, 0.74, 1.0];
+
+  function updatePower() {
+    const rect = powerShowcase.getBoundingClientRect();
+    const total = powerShowcase.offsetHeight - window.innerHeight;
+    const progress = clamp01(-rect.top / total);
+    const openP = clamp01(progress / 0.2);
+
+    powerLaptop.style.setProperty('--pw-lid', lerp(78, 0, openP) + 'deg');
+    powerLaptop.style.setProperty('--pw-screen', openP > 0.6 ? 1 : openP / 0.6);
+    powerLaptop.style.setProperty('--pw-roty', lerp(-18, -4, openP) + 'deg');
+
+    let idx = powerBreakpoints.findIndex(bp => progress < bp);
+    if (idx === -1) idx = powerBreakpoints.length - 1;
+    powerSteps.forEach((el, i) => el.classList.toggle('active', i === idx));
+  }
+
+  if (powerShowcase) {
+    if (reduceMotion) {
+      powerLaptop.style.setProperty('--pw-lid', '0deg');
+      powerLaptop.style.setProperty('--pw-screen', 1);
+      powerSteps[0]?.classList.add('active');
+    } else {
+      window.addEventListener('scroll', updatePower, { passive: true });
+      window.addEventListener('resize', updatePower);
+      updatePower();
+    }
+  }
+</script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
