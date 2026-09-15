@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Computer Zone Zero - Computer Zone</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cake Details — La Maison Sucre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar" id="navbar"><div class="wrap nav-inner"><a href="index.html" class="logo"><span class="logo-mark"></span>Computer Zone</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="laptops.html">Laptops</a></li><li><a href="categories.html">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-right"><div class="search-wrap"><input type="text" class="search-input" id="searchInput" placeholder="Search laptops..." aria-label="Search laptops"><button class="search-btn" id="searchBtn" aria-label="Search laptops"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div><a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a><button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></nav>
-<div class="mobile-panel" id="mobilePanel"><a href="index.html">Home</a><a href="laptops.html">Laptops</a><a href="categories.html">Categories</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a></div>
-<main class="page-main"><div class="wrap"><div class="product-detail"><div><img class="product-detail-image" src="assets/laptop-hero.jpg" alt="Computer Zone Zero laptop" width="1200" height="800"><div class="page-panel" style="margin-top:18px;"><p>Free shipping on every order. Talk to our team before you buy at <a href="contact.html" style="color:var(--accent);">Contact</a>.</p></div></div><div><div class="page-kicker"><span class="dot"></span>Now shipping</div><h1 class="page-title">Computer Zone Zero</h1><p class="page-lede">A quiet performance laptop built from a single aluminum unibody, with the power to work hard and the calm to stay focused.</p><ul class="detail-list"><li><b>22h</b>Battery life</li><li><b>2.8K</b>OLED display</li><li><b>1.9kg</b>Unibody design</li><li><b>0dB</b>Fanless core</li></ul><a href="contact.html" class="btn btn-primary" style="margin-top:30px;">Ask about Computer Zone Zero</a></div></div></div></main>
-<footer class="footer"><div class="wrap"><div class="footer-bottom"><span>© 2026 Computer Zone. All rights reserved.</span><div class="footer-legal"><a href="laptops.html">Laptops</a><a href="categories.html">Categories</a><a href="contact.html">Contact</a></div></div></div></footer>
+<nav class="navbar" id="navbar"><div class="wrap nav-inner"><a href="index.html" class="logo"><span class="logo-mark"></span>La Maison Sucre</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#laptops-section">Cakes</a></li><li><a href="categories.html">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-right"><div class="search-wrap"><input type="text" class="search-input" id="searchInput" placeholder="Search cakes..." aria-label="Search cakes"><button class="search-btn" id="searchBtn" aria-label="Search cakes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div><a href="contact.html" class="btn btn-primary">Reserve Custom Cake</a><button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-panel" id="mobilePanel"><a href="index.html">Home</a><a href="index.html#laptops-section">Cakes</a><a href="categories.html">Categories</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-primary">Reserve Custom Cake</a></div>
+<main class="page-main"><div class="wrap"><div class="product-detail"><div><img class="product-detail-image" id="cakeDetailImg" src="assets/cake-truffle.jpg" alt="Signature Chocolate Truffle Cake" width="1200" height="800"><div class="page-panel" style="margin-top:18px; border-color: rgba(229, 169, 88, 0.25); background: rgba(28, 14, 25, 0.85);"><p style="color:#d1c2b0;">Hand-baked fresh daily in our atelier. Complimentary delivery on bespoke celebration orders. Connect with our head pastry chef at <a href="contact.html" style="color:var(--cake-gold);">Atelier Contact</a>.</p></div></div><div><div class="page-kicker"><span class="dot"></span><span id="cakeDetailTag">SIGNATURE COLLECTION</span></div><h1 class="page-title" id="cakeDetailTitle">Signature Chocolate Truffle</h1><p class="page-lede" id="cakeDetailDesc">Rich Belgian chocolate layers finished with silky ganache, dark berries, and 24k edible gold leaf.</p><ul class="detail-list"><li style="border-color:rgba(229,169,88,0.25); background:rgba(45,23,40,0.5);"><b id="cakeDetailFlavor" style="color:#f5ebd9;">Rich Cocoa</b>Flavor Profile</li><li style="border-color:rgba(229,169,88,0.25); background:rgba(45,23,40,0.5);"><b id="cakeDetailLayers" style="color:#f5ebd9;">4 Layers</b>Layering</li><li style="border-color:rgba(229,169,88,0.25); background:rgba(45,23,40,0.5);"><b id="cakeDetailServes" style="color:#f5ebd9;">8–10</b>Portion Size</li><li style="border-color:rgba(229,169,88,0.25); background:rgba(45,23,40,0.5);"><b id="cakeDetailDietary" style="color:#f5ebd9;">Vegetarian</b>Dietary Standard</li></ul><div style="margin-top:30px; display:flex; align-items:center; gap:20px;"><span id="cakeDetailPrice" style="font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:#e5a958;">From $149</span><a href="contact.html" class="btn btn-primary">Inquire / Reserve Cake</a></div></div></div></div></main>
+<footer class="footer"><div class="wrap"><div class="footer-bottom"><span>© 2026 La Maison Sucre. All rights reserved.</span><div class="footer-legal"><a href="index.html#laptops-section">Cakes</a><a href="categories.html">Categories</a><a href="contact.html">Contact</a></div></div></div></footer>
 <script src="js/site.js"></script>
+<script>
+(function() {
+  const cakes = {
+    truffle: {
+      tag: 'SIGNATURE COLLECTION',
+      title: 'Signature Chocolate Truffle',
+      desc: 'Rich Belgian chocolate layers finished with silky ganache, dark berries, and 24k edible gold leaf.',
+      img: 'assets/cake-truffle.jpg',
+      flavor: 'Rich Cocoa',
+      layers: '4 Layers',
+      serves: '8–10',
+      dietary: 'Vegetarian',
+      price: 'From $149'
+    },
+    raspberry: {
+      tag: 'BESTSELLER',
+      title: 'Raspberry Vanilla Blossom',
+      desc: 'Fluffy Madagascar vanilla sponge layered with house-made fresh raspberry compote and silky cream.',
+      img: 'assets/cake-raspberry.jpg',
+      flavor: 'Vanilla Berry',
+      layers: '3 Layers',
+      serves: '10–12',
+      dietary: 'Vegetarian',
+      price: 'From $169'
+    },
+    velvet: {
+      tag: 'CHEF\'S PICK',
+      title: 'Golden Velvet & Honey',
+      desc: 'Infused with organic wildflower honey, saffron cream, and adorned with delicate 24k edible gold leaf.',
+      img: 'assets/cake-velvet.jpg',
+      flavor: 'Honey Saffron',
+      layers: '4 Layers',
+      serves: '12–14',
+      dietary: 'Organic',
+      price: 'From $189'
+    },
+    matcha: {
+      tag: 'SEASONAL',
+      title: 'Matcha Citrus Bloom',
+      desc: 'Ceremonial Uji matcha sponge paired with vibrant yuzu curd and white chocolate whip.',
+      img: 'assets/cake-matcha.jpg',
+      flavor: 'Matcha Yuzu',
+      layers: '3 Layers',
+      serves: '8–10',
+      dietary: 'Low Sugar',
+      price: 'From $159'
+    },
+    caramel: {
+      tag: 'ARTISANAL',
+      title: 'Salted Caramel Pecan',
+      desc: 'Decadent butterscotch mousse, slow-roasted Georgia pecans, and fleur de sel caramel drizzle.',
+      img: 'assets/cake-caramel.jpg',
+      flavor: 'Salted Caramel',
+      layers: '4 Layers',
+      serves: '10–12',
+      dietary: 'Nut Infused',
+      price: 'From $179'
+    }
+  };
+
+  const param = new URLSearchParams(window.location.search).get('cake')?.toLowerCase();
+  if (param && cakes[param]) {
+    const item = cakes[param];
+    document.getElementById('cakeDetailTag').textContent = item.tag;
+    document.getElementById('cakeDetailTitle').textContent = item.title;
+    document.getElementById('cakeDetailDesc').textContent = item.desc;
+    document.getElementById('cakeDetailImg').src = item.img;
+    document.getElementById('cakeDetailImg').alt = item.title;
+    document.getElementById('cakeDetailFlavor').textContent = item.flavor;
+    document.getElementById('cakeDetailLayers').textContent = item.layers;
+    document.getElementById('cakeDetailServes').textContent = item.serves;
+    document.getElementById('cakeDetailDietary').textContent = item.dietary;
+    document.getElementById('cakeDetailPrice').textContent = item.price;
+    document.title = item.title + ' — La Maison Sucre';
+  }
+})();
+</script>
 </body>
 </html>

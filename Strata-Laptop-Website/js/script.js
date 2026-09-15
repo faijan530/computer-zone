@@ -1,4 +1,5 @@
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+(function() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
   let scrollFrame = 0;
 
@@ -43,7 +44,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
     mobilePanel.classList.remove('open');
   }));
 
-  /* Mouse parallax: laptop tilt + cursor glow + badge drift */
+  /* Mouse parallax: 3D cake tilt + cursor glow + badge drift */
   const heroVisual = document.getElementById('heroVisual');
   const laptop = document.getElementById('laptop');
   const cursorGlow = document.getElementById('cursorGlow');
@@ -51,38 +52,44 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   let spinFrame;
   let isSpinning = false;
 
-  laptop.addEventListener('click', () => {
-    if (reduceMotion || isSpinning) return;
-    isSpinning = true;
-    cancelAnimationFrame(spinFrame);
-    const start = performance.now();
-    const duration = 1900;
+  if (laptop) {
+    laptop.addEventListener('click', () => {
+      if (reduceMotion || isSpinning) return;
+      isSpinning = true;
+      cancelAnimationFrame(spinFrame);
+      const start = performance.now();
+      const duration = 1600;
 
-    function rotate(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-      laptop.style.setProperty('--spin', (easedProgress * 720) + 'deg');
-      if (progress < 1) {
-        spinFrame = requestAnimationFrame(rotate);
-      } else {
-        laptop.style.setProperty('--spin', '0deg');
-        isSpinning = false;
+      function rotate(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        laptop.style.setProperty('--spin', (easedProgress * 360) + 'deg');
+        if (progress < 1) {
+          spinFrame = requestAnimationFrame(rotate);
+        } else {
+          laptop.style.setProperty('--spin', '0deg');
+          isSpinning = false;
+        }
       }
-    }
 
-    spinFrame = requestAnimationFrame(rotate);
-  });
+      spinFrame = requestAnimationFrame(rotate);
+    });
+  }
 
-  if (!isTouch && !reduceMotion) {
+  if (heroVisual && !isTouch && !reduceMotion) {
     heroVisual.addEventListener('mousemove', (e) => {
       const rect = heroVisual.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      laptop.style.setProperty('--ry', (x * 16 + 10) + 'deg');
-      laptop.style.setProperty('--rx', (-y * 12 - 6) + 'deg');
+      if (laptop) {
+        laptop.style.setProperty('--ry', (x * 16 + 10) + 'deg');
+        laptop.style.setProperty('--rx', (-y * 12 - 6) + 'deg');
+      }
 
-      cursorGlow.style.transform = `translate(${e.clientX - rect.left - 130}px, ${e.clientY - rect.top - 130}px)`;
+      if (cursorGlow) {
+        cursorGlow.style.transform = `translate(${e.clientX - rect.left - 130}px, ${e.clientY - rect.top - 130}px)`;
+      }
 
       badges.forEach((b, i) => {
         const factor = 10 + i * 6;
@@ -90,16 +97,18 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
       });
     });
     heroVisual.addEventListener('mouseleave', () => {
-      laptop.style.setProperty('--ry', '10deg');
-      laptop.style.setProperty('--rx', '-8deg');
-      cursorGlow.style.transform = 'translate(-1000px,-1000px)';
+      if (laptop) {
+        laptop.style.setProperty('--ry', '10deg');
+        laptop.style.setProperty('--rx', '-8deg');
+      }
+      if (cursorGlow) cursorGlow.style.transform = 'translate(-1000px,-1000px)';
       badges.forEach(b => b.style.transform = 'translate(0,0)');
     });
   }
 
-  /* Ambient particle field */
+  /* Ambient golden & sugar dust particle field */
   const canvas = document.getElementById('particles');
-  if (canvas && !reduceMotion && window.innerWidth > 640) {
+  if (canvas && heroVisual && !reduceMotion && window.innerWidth > 640) {
     const ctx = canvas.getContext('2d');
     let w, h, particles;
     let isActive = true;
@@ -110,13 +119,14 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
       h = canvas.height = heroVisual.clientHeight;
     }
     function init() {
-      particles = Array.from({ length: 34 }, () => ({
+      particles = Array.from({ length: 36 }, (_, i) => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        r: Math.random() * 1.4 + 0.4,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
-        a: Math.random() * 0.5 + 0.15
+        r: Math.random() * 1.5 + 0.4,
+        vx: (Math.random() - 0.5) * 0.14,
+        vy: (Math.random() - 0.5) * 0.14,
+        a: Math.random() * 0.55 + 0.15,
+        isGold: i % 2 === 0
       }));
     }
     function tick() {
@@ -132,7 +142,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
         if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(140,170,255,${p.a})`;
+        ctx.fillStyle = p.isGold ? `rgba(229,169,88,${p.a})` : `rgba(255,235,205,${p.a})`;
         ctx.fill();
       });
       requestAnimationFrame(tick);
@@ -247,6 +257,125 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
       el.style.setProperty('--fx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
       el.style.setProperty('--fy', `${((e.clientY - rect.top) / rect.height) * 100}%`);
     });
+  });
+
+  /* Cake Detail Modal Interaction */
+  const cakeModal = document.getElementById('cakeModalOverlay');
+  const cakeModalClose = document.getElementById('cakeModalClose');
+  const cakeLinks = document.querySelectorAll('.explore-link');
+
+  const cakeData = [
+    {
+      tag: 'SIGNATURE',
+      name: 'Signature Chocolate Truffle',
+      desc: 'Rich Belgian chocolate layers finished with silky ganache, dark berries, and 24k edible gold leaf.',
+      image: 'assets/cake-truffle.jpg',
+      flavor: 'Rich Cocoa',
+      layers: '4 Layers',
+      serves: '8–10',
+      dietary: 'Vegetarian',
+      price: 'From $149'
+    },
+    {
+      tag: 'BESTSELLER',
+      name: 'Raspberry Vanilla Blossom',
+      desc: 'Fluffy Madagascar vanilla sponge layered with house-made fresh raspberry compote and silky cream.',
+      image: 'assets/cake-raspberry.jpg',
+      flavor: 'Vanilla Berry',
+      layers: '3 Layers',
+      serves: '10–12',
+      dietary: 'Vegetarian',
+      price: 'From $169'
+    },
+    {
+      tag: 'CHEF\'S PICK',
+      name: 'Golden Velvet & Honey',
+      desc: 'Infused with organic wildflower honey, saffron cream, and adorned with delicate 24k edible gold leaf.',
+      image: 'assets/cake-velvet.jpg',
+      flavor: 'Honey Saffron',
+      layers: '4 Layers',
+      serves: '12–14',
+      dietary: 'Organic',
+      price: 'From $189'
+    },
+    {
+      tag: 'SEASONAL',
+      name: 'Matcha Citrus Bloom',
+      desc: 'Ceremonial Uji matcha sponge paired with vibrant yuzu curd and white chocolate whip.',
+      image: 'assets/cake-matcha.jpg',
+      flavor: 'Matcha Yuzu',
+      layers: '3 Layers',
+      serves: '8–10',
+      dietary: 'Low Sugar',
+      price: 'From $159'
+    },
+    {
+      tag: 'ARTISANAL',
+      name: 'Salted Caramel Pecan',
+      desc: 'Decadent butterscotch mousse, slow-roasted Georgia pecans, and fleur de sel caramel drizzle.',
+      image: 'assets/cake-caramel.jpg',
+      flavor: 'Salted Caramel',
+      layers: '4 Layers',
+      serves: '10–12',
+      dietary: 'Nut Infused',
+      price: 'From $179'
+    }
+  ];
+
+  function openCakeModal(index) {
+    if (!cakeModal || !cakeData[index]) return;
+    const data = cakeData[index];
+    const tagEl = document.getElementById('modalTag');
+    const titleEl = document.getElementById('modalTitle');
+    const descEl = document.getElementById('modalDesc');
+    const imgEl = document.getElementById('modalImg');
+    const flavorEl = document.getElementById('modalFlavor');
+    const layersEl = document.getElementById('modalLayers');
+    const servesEl = document.getElementById('modalServes');
+    const dietaryEl = document.getElementById('modalDietary');
+    const priceEl = document.getElementById('modalPrice');
+
+    if (tagEl) tagEl.textContent = data.tag;
+    if (titleEl) titleEl.textContent = data.name;
+    if (descEl) descEl.textContent = data.desc;
+    if (imgEl) { imgEl.src = data.image; imgEl.alt = data.name; }
+    if (flavorEl) flavorEl.textContent = data.flavor;
+    if (layersEl) layersEl.textContent = data.layers;
+    if (servesEl) servesEl.textContent = data.serves;
+    if (dietaryEl) dietaryEl.textContent = data.dietary;
+    if (priceEl) priceEl.textContent = data.price;
+
+    cakeModal.classList.add('open');
+    cakeModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCakeModal() {
+    if (!cakeModal) return;
+    cakeModal.classList.remove('open');
+    cakeModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  cakeLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // If left click without modifier keys, open smooth in-page modal
+      if (e.button === 0 && !e.ctrlKey && !e.shiftKey && !e.metaKey) {
+        e.preventDefault();
+        const index = parseInt(link.getAttribute('data-cake-index') || '0', 10);
+        openCakeModal(index);
+      }
+    });
+  });
+
+  cakeModalClose?.addEventListener('click', closeCakeModal);
+  cakeModal?.addEventListener('click', (e) => {
+    if (e.target === cakeModal) closeCakeModal();
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cakeModal?.classList.contains('open')) {
+      closeCakeModal();
+    }
   });
 
   /* Performance counters */
@@ -414,11 +543,12 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
     let isRunning = false;
     function tResize() { tw = techCanvas.width = techIntro.clientWidth; th = techCanvas.height = techIntro.clientHeight; }
     function tInit() {
-      tparticles = Array.from({ length: 40 }, () => ({
+      tparticles = Array.from({ length: 40 }, (_, i) => ({
         x: Math.random() * tw, y: Math.random() * th,
         r: Math.random() * 1.3 + 0.4,
         vx: (Math.random() - 0.5) * 0.1, vy: (Math.random() - 0.5) * 0.1,
-        a: Math.random() * 0.4 + 0.1
+        a: Math.random() * 0.4 + 0.1,
+        isGold: i % 2 === 0
       }));
     }
     function tTick() {
@@ -433,7 +563,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
         if (p.x < 0) p.x = tw; if (p.x > tw) p.x = 0;
         if (p.y < 0) p.y = th; if (p.y > th) p.y = 0;
         tctx.beginPath(); tctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        tctx.fillStyle = `rgba(140,170,255,${p.a})`; tctx.fill();
+        tctx.fillStyle = p.isGold ? `rgba(229,169,88,${p.a})` : `rgba(245,235,217,${p.a})`; tctx.fill();
       });
       requestAnimationFrame(tTick);
     }
@@ -560,3 +690,4 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
       updatePower();
     }
   }
+})();

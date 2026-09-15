@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Computer Zone — Every layer, engineered on purpose.</title>
+<title>La Maison Sucre — Artisan Patisserie & Custom 3D Cakes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -13,22 +13,23 @@
 
 <nav class="navbar" id="navbar">
   <div class="wrap nav-inner">
-    <a href="index.html" class="logo"><span class="logo-mark"></span>Computer Zone</a>
+    <a href="index.html" class="logo"><span class="logo-mark"></span>La Maison Sucre</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="laptops.html">Laptops</a></li>
-      <li><a href="categories.html">Categories</a></li>
+      <li><a href="#laptops-section">Cakes</a></li>
+      <li><a href="#categories-section">Collections</a></li>
+      <li><a href="#powerShowcase">Atelier</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-right">
       <div class="search-wrap">
-        <input type="text" class="search-input" id="searchInput" placeholder="Search laptops…">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search cakes…">
         <button class="search-btn" id="searchBtn" aria-label="Toggle search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </button>
       </div>
-      <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
+      <a href="#powerShowcase" class="btn btn-primary">Reserve a Creation</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -36,25 +37,26 @@
 
 <div class="mobile-panel" id="mobilePanel">
   <a href="index.html">Home</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="categories.html">Categories</a>
+  <a href="#laptops-section">Cakes</a>
+  <a href="#categories-section">Collections</a>
+  <a href="#powerShowcase">Atelier</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
+  <a href="#powerShowcase" class="btn btn-primary">Reserve a Creation</a>
 </div>
 
-<section class="hero">
+<section class="hero" id="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow-line"><span class="dot"></span><span>Computer Zone Zero — now shipping</span></div>
+      <div class="eyebrow-line"><span class="dot"></span><span>Artisan Patisserie — Freshly Crafted Daily</span></div>
       <h1 class="hero-heading">
-        <span class="line"><span>Every layer,</span></span>
-        <span class="line"><span>engineered on purpose.</span></span>
+        <span class="line"><span>Crafted to</span></span>
+        <span class="line"><span>be remembered.</span></span>
       </h1>
-      <p class="hero-desc">The Computer Zone Zero pairs aerospace-grade aluminum with a fanless cooling core, so power and silence finally sit in the same machine.</p>
+      <p class="hero-desc">Handcrafted multi-layer cakes, infused with premium Belgian chocolate and organic berries, created for your most unforgettable moments.</p>
       <div class="hero-ctas">
-        <a href="product.html" class="btn btn-primary">Shop Computer Zone Zero</a>
-        <a href="index.html#showcaseSection" class="btn btn-ghost">See it in motion</a>
+        <a href="#laptops-section" class="btn btn-primary">Explore Our Cakes</a>
+        <a href="#powerShowcase" class="btn btn-ghost">Customize Your Cake</a>
       </div>
     </div>
 
@@ -63,26 +65,42 @@
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <canvas id="particles"></canvas>
-      <img class="dummy-laptop-image" src="assets/laptop-hero.jpg" alt="Dummy laptop product photo" width="900" height="675" loading="eager" fetchpriority="high" decoding="async">
+      <img class="hero-photo-image" src="assets/cake-hero.jpg" alt="Artisan signature cake photo" width="900" height="675" loading="eager" fetchpriority="high" decoding="async">
 
-      <div class="laptop-stage" id="laptopStage">
-        <div class="laptop" id="laptop">
-          <div class="laptop-screen">
-            <div class="screen-glow"></div>
-            <div class="screen-ui">
-              <div class="ui-topbar"><span></span><span></span><span></span></div>
-              <div class="ui-row wide"></div>
-              <div class="ui-row"></div>
-              <div class="ui-grid">
-                <div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div>
-              </div>
+      <div class="laptop-stage cake-stage" id="laptopStage">
+        <div class="laptop cake" id="laptop">
+          <div class="cake-shadow"></div>
+          <div class="cake-body">
+            <div class="cake-top">
+              <div class="cake-top-surface"></div>
+              <div class="drip drip-1"></div>
+              <div class="drip drip-2"></div>
+              <div class="drip drip-3"></div>
+              <div class="drip drip-4"></div>
+              <div class="drip drip-5"></div>
+              <div class="cake-topping berry berry-1"></div>
+              <div class="cake-topping berry berry-2"></div>
+              <div class="cake-topping berry berry-3"></div>
+              <div class="cake-topping macaron macaron-1"></div>
+              <div class="cake-topping leaf-gold"></div>
+            </div>
+            <div class="cake-layer layer-top">
+              <div class="layer-texture"></div>
+            </div>
+            <div class="cake-filling filling-middle"></div>
+            <div class="cake-layer layer-bottom">
+              <div class="layer-texture"></div>
             </div>
           </div>
-          <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+          <div class="cake-pedestal">
+            <div class="pedestal-plate"></div>
+            <div class="pedestal-stem"></div>
+            <div class="pedestal-base"></div>
+          </div>
         </div>
-        <div class="badge badge-1">22h battery life</div>
-        <div class="badge badge-2">2.8K OLED display</div>
-        <div class="badge badge-3">0dB fanless core</div>
+        <div class="badge badge-1">100% Belgian Chocolate</div>
+        <div class="badge badge-2">Hand-Baked Fresh Daily</div>
+        <div class="badge badge-3">Custom Layer Options</div>
       </div>
     </div>
   </div>
@@ -96,21 +114,21 @@
 <section class="brand-intro">
   <div class="wrap">
     <p class="brand-statement" id="brandStatement">
-      Computer Zone started with a single question: why do powerful laptops have to sound like it.
-      <em>Five years of thermal engineering later, we shipped a machine that runs silent under full load.</em>
+      La Maison Sucre was founded on a single belief: that a truly exceptional cake deserves the same devotion as a Michelin-starred dish.
+      <em>Every creation is hand-finished in our atelier — built slowly, balanced carefully, and delivered for your most unforgettable moments.</em>
     </p>
     <div class="stats-row">
-      <div class="stat" data-count="0" data-unit="dB">
-        <div class="stat-num"><span class="num">0</span><span class="unit">dB</span></div>
-        <div class="stat-label">Fan noise at full load</div>
+      <div class="stat" data-count="72" data-unit="%">
+        <div class="stat-num"><span class="num">0</span><span class="unit">%</span></div>
+        <div class="stat-label">Pure Belgian cocoa</div>
       </div>
-      <div class="stat" data-count="22" data-unit="h">
+      <div class="stat" data-count="24" data-unit="h">
         <div class="stat-num"><span class="num">0</span><span class="unit">h</span></div>
-        <div class="stat-label">Battery life, mixed use</div>
+        <div class="stat-label">Fruit infusion time</div>
       </div>
-      <div class="stat" data-count="1.9" data-unit="kg">
-        <div class="stat-num"><span class="num">0</span><span class="unit">kg</span></div>
-        <div class="stat-label">Full-aluminum unibody</div>
+      <div class="stat" data-count="100" data-unit="%">
+        <div class="stat-num"><span class="num">0</span><span class="unit">%</span></div>
+        <div class="stat-label">Hand-crafted, daily</div>
       </div>
     </div>
   </div>
@@ -121,15 +139,19 @@
 ========================================================== -->
 
 <!-- 1. Featured Laptops -->
-<section class="laptops-section">
+<!-- 1. Featured Cakes Collection -->
+<section class="laptops-section" id="laptops-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>A model for the way you actually work.</h2>
+      <div>
+        <h2>Artisan Creations for Every Celebration.</h2>
+        <p>A curated collection of handcrafted cakes, layered with premium ingredients and finished for your most memorable moments.</p>
+      </div>
       <div class="carousel-controls">
-        <button class="carousel-btn" id="carPrev" aria-label="Previous laptop">
+        <button class="carousel-btn" id="carPrev" aria-label="Previous cake">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <button class="carousel-btn" id="carNext" aria-label="Next laptop">
+        <button class="carousel-btn" id="carNext" aria-label="Next cake">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
@@ -137,102 +159,102 @@
 
     <div class="carousel-track" id="carouselTrack">
 
-      <article class="product-card" style="--card-accent:#6e9bff" data-tilt>
+      <article class="product-card" style="--card-accent:#e5a958" data-tilt data-cake-index="0">
         <div class="card-glow"></div>
         <div class="card-inner">
-          <span class="card-tag">Fanless</span>
-          <div class="device-stage"><img class="product-image" src="assets/laptop-gaming.jpg" alt="Lenovo Legion 5 laptop" loading="lazy"></div>
-          <h3 class="product-name">Lenovo Legion 5</h3>
-          <p class="product-tagline">Performance laptop</p>
+          <span class="card-tag">SIGNATURE</span>
+          <div class="device-stage"><img class="product-image" src="assets/cake-truffle.jpg" alt="Signature Chocolate Truffle Cake" loading="lazy"></div>
+          <h3 class="product-name">Signature Chocolate Truffle</h3>
+          <p class="product-tagline">Dark Belgian chocolate &amp; berry layer</p>
           <div class="spec-grid">
-            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
-            <div class="spec-item">Memory<b>32GB</b></div>
-            <div class="spec-item">Storage<b>1TB SSD</b></div>
-            <div class="spec-item">Display<b>3.2K 120Hz</b></div>
+            <div class="spec-item">Flavor<b>Rich Cocoa</b></div>
+            <div class="spec-item">Layers<b>4 Layers</b></div>
+            <div class="spec-item">Serves<b>8–10</b></div>
+            <div class="spec-item">Dietary<b>Vegetarian</b></div>
           </div>
           <div class="card-footer">
-            <span class="price">$1,899<sup>USD</sup></span>
-            <a href="product.html" class="explore-link">Explore<span class="arrow">→</span></a>
+            <span class="price">From $149</span>
+            <a href="product.html?cake=truffle" class="explore-link" data-cake-index="0">View Cake<span class="arrow">→</span></a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" style="--card-accent:#7c6cff" data-tilt>
+      <article class="product-card" style="--card-accent:#f43f5e" data-tilt data-cake-index="1">
         <div class="card-glow"></div>
         <div class="card-inner">
-          <span class="card-tag">Creator</span>
-          <div class="device-stage"><img class="product-image" src="assets/laptop-hero.jpg" alt="Dell XPS 16 laptop" loading="lazy"></div>
-          <h3 class="product-name">Dell XPS 16</h3>
-          <p class="product-tagline">Creator workstation</p>
+          <span class="card-tag">BESTSELLER</span>
+          <div class="device-stage"><img class="product-image" src="assets/cake-raspberry.jpg" alt="Raspberry Vanilla Blossom Layer Cake" loading="lazy"></div>
+          <h3 class="product-name">Raspberry Vanilla Blossom</h3>
+          <p class="product-tagline">Vanilla sponge &amp; fresh raspberry compote</p>
           <div class="spec-grid">
-            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
-            <div class="spec-item">Memory<b>64GB</b></div>
-            <div class="spec-item">Storage<b>2TB SSD</b></div>
-            <div class="spec-item">Display<b>4K OLED</b></div>
+            <div class="spec-item">Flavor<b>Vanilla Berry</b></div>
+            <div class="spec-item">Layers<b>3 Layers</b></div>
+            <div class="spec-item">Serves<b>10–12</b></div>
+            <div class="spec-item">Dietary<b>Vegetarian</b></div>
           </div>
           <div class="card-footer">
-            <span class="price">$2,399<sup>USD</sup></span>
-            <a href="laptops.html#dell-xps-16" class="explore-link">Explore<span class="arrow">→</span></a>
+            <span class="price">From $169</span>
+            <a href="product.html?cake=raspberry" class="explore-link" data-cake-index="1">View Cake<span class="arrow">→</span></a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" style="--card-accent:#e0838a" data-tilt>
+      <article class="product-card" style="--card-accent:#d4af37" data-tilt data-cake-index="2">
         <div class="card-glow"></div>
         <div class="card-inner">
-          <span class="card-tag">Everyday</span>
-          <div class="device-stage"><img class="product-image" src="assets/laptop-hero.jpg" alt="MacBook Air laptop" loading="lazy"></div>
-          <h3 class="product-name">MacBook Air M3</h3>
-          <p class="product-tagline">Ultraportable laptop</p>
+          <span class="card-tag">CHEF'S PICK</span>
+          <div class="device-stage"><img class="product-image" src="assets/cake-velvet.jpg" alt="Golden Velvet & Honey Cake" loading="lazy"></div>
+          <h3 class="product-name">Golden Velvet &amp; Honey</h3>
+          <p class="product-tagline">Saffron sponge &amp; 24k gold leaf</p>
           <div class="spec-grid">
-            <div class="spec-item">Processor<b>Core Ultra 5</b></div>
-            <div class="spec-item">Memory<b>16GB</b></div>
-            <div class="spec-item">Storage<b>512GB SSD</b></div>
-            <div class="spec-item">Display<b>2.8K 90Hz</b></div>
+            <div class="spec-item">Flavor<b>Honey Saffron</b></div>
+            <div class="spec-item">Layers<b>4 Layers</b></div>
+            <div class="spec-item">Serves<b>12–14</b></div>
+            <div class="spec-item">Dietary<b>Organic</b></div>
           </div>
           <div class="card-footer">
-            <span class="price">$1,199<sup>USD</sup></span>
-            <a href="laptops.html#macbook-air-m3" class="explore-link">Explore<span class="arrow">→</span></a>
+            <span class="price">From $189</span>
+            <a href="product.html?cake=velvet" class="explore-link" data-cake-index="2">View Cake<span class="arrow">→</span></a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" style="--card-accent:#3fb8ac" data-tilt>
+      <article class="product-card" style="--card-accent:#10b981" data-tilt data-cake-index="3">
         <div class="card-glow"></div>
         <div class="card-inner">
-          <span class="card-tag">240Hz</span>
-          <div class="device-stage"><img class="product-image" src="assets/laptop-rog.jpg" alt="ASUS ROG Zephyrus G16 laptop" loading="lazy"></div>
-          <h3 class="product-name">ASUS ROG Zephyrus G16</h3>
-          <p class="product-tagline">Gaming performance</p>
+          <span class="card-tag">SEASONAL</span>
+          <div class="device-stage"><img class="product-image" src="assets/cake-matcha.jpg" alt="Matcha Citrus Bloom Layer Cake" loading="lazy"></div>
+          <h3 class="product-name">Matcha Citrus Bloom</h3>
+          <p class="product-tagline">Uji matcha &amp; yuzu curd infusion</p>
           <div class="spec-grid">
-            <div class="spec-item">Processor<b>Core Ultra 9</b></div>
-            <div class="spec-item">Memory<b>32GB</b></div>
-            <div class="spec-item">Storage<b>1TB SSD</b></div>
-            <div class="spec-item">Display<b>240Hz QHD</b></div>
+            <div class="spec-item">Flavor<b>Matcha Yuzu</b></div>
+            <div class="spec-item">Layers<b>3 Layers</b></div>
+            <div class="spec-item">Serves<b>8–10</b></div>
+            <div class="spec-item">Dietary<b>Low Sugar</b></div>
           </div>
           <div class="card-footer">
-            <span class="price">$2,199<sup>USD</sup></span>
-            <a href="laptops.html#asus-rog-zephyrus-g16" class="explore-link">Explore<span class="arrow">→</span></a>
+            <span class="price">From $159</span>
+            <a href="product.html?cake=matcha" class="explore-link" data-cake-index="3">View Cake<span class="arrow">→</span></a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" style="--card-accent:#d9a15b" data-tilt>
+      <article class="product-card" style="--card-accent:#d97706" data-tilt data-cake-index="4">
         <div class="card-glow"></div>
         <div class="card-inner">
-          <span class="card-tag">Essentials</span>
-          <div class="device-stage"><img class="product-image" src="assets/laptop-hp.jpg" alt="HP Pavilion 15 laptop" loading="lazy"></div>
-          <h3 class="product-name">HP Pavilion 15</h3>
-          <p class="product-tagline">Student laptop</p>
+          <span class="card-tag">ARTISANAL</span>
+          <div class="device-stage"><img class="product-image" src="assets/cake-caramel.jpg" alt="Salted Caramel Pecan Cake" loading="lazy"></div>
+          <h3 class="product-name">Salted Caramel Pecan</h3>
+          <p class="product-tagline">Butterscotch mousse &amp; roasted pecans</p>
           <div class="spec-grid">
-            <div class="spec-item">Processor<b>Core Ultra 5</b></div>
-            <div class="spec-item">Memory<b>16GB</b></div>
-            <div class="spec-item">Storage<b>512GB SSD</b></div>
-            <div class="spec-item">Display<b>FHD+</b></div>
+            <div class="spec-item">Flavor<b>Salted Caramel</b></div>
+            <div class="spec-item">Layers<b>4 Layers</b></div>
+            <div class="spec-item">Serves<b>10–12</b></div>
+            <div class="spec-item">Dietary<b>Nut Infused</b></div>
           </div>
           <div class="card-footer">
-            <span class="price">$899<sup>USD</sup></span>
-            <a href="laptops.html#hp-pavilion-15" class="explore-link">Explore<span class="arrow">→</span></a>
+            <span class="price">From $179</span>
+            <a href="product.html?cake=caramel" class="explore-link" data-cake-index="4">View Cake<span class="arrow">→</span></a>
           </div>
         </div>
       </article>
@@ -241,126 +263,198 @@
   </div>
 </section>
 
-<!-- 2. Laptop Categories -->
-<section class="categories-section">
+<!-- Cake Detail Modal Overlay -->
+<div class="cake-modal-overlay" id="cakeModalOverlay" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="cake-modal-card">
+    <button class="cake-modal-close" id="cakeModalClose" aria-label="Close detail modal">&times;</button>
+    <div class="modal-stage">
+      <img class="modal-cake-img" id="modalImg" src="assets/cake-truffle.jpg" alt="Cake detail visual">
+    </div>
+    <div class="modal-details">
+      <span class="modal-tag" id="modalTag">SIGNATURE</span>
+      <h3 class="modal-title" id="modalTitle">Signature Chocolate Truffle</h3>
+      <p class="modal-desc" id="modalDesc">Rich Belgian chocolate layers finished with silky ganache and fresh dark berries.</p>
+      <div class="modal-spec-grid">
+        <div class="modal-spec-item">Flavor <b id="modalFlavor">Rich Cocoa</b></div>
+        <div class="modal-spec-item">Layers <b id="modalLayers">4 Layers</b></div>
+        <div class="modal-spec-item">Serves <b id="modalServes">8–10</b></div>
+        <div class="modal-spec-item">Dietary <b id="modalDietary">Vegetarian</b></div>
+      </div>
+      <div class="modal-footer">
+        <span class="modal-price" id="modalPrice">From $149</span>
+        <a href="contact.html" class="modal-cta">Inquire / Reserve Cake <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Cake Categories Bento Grid -->
+<section class="categories-section" id="categories-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Find the shape built for your work.</h2>
-      <p>Every Computer Zone line shares the same aluminum unibody and fanless core — tuned differently for what you do with it.</p>
+      <div>
+        <h2>Explore Our Signature Collections.</h2>
+        <p>Every creation is hand-baked daily in our atelier — tailored for intimate gatherings and grand celebrations.</p>
+      </div>
     </div>
 
     <div class="category-grid">
-      <a href="categories.html#gaming" class="category-card large reveal" data-reveal data-tilt-cat style="--cc:var(--cat-gaming)">
-        <img class="cat-image" src="assets/laptop-gaming.jpg" alt="Gaming laptop setup" loading="lazy">
+      <a href="categories.html#signature" class="category-card large reveal" data-reveal data-tilt-cat style="--cc:var(--cake-gold)">
+        <img class="cat-image" src="assets/cat-signature.jpg" alt="Signature Celebration Cakes" loading="lazy">
         <div class="cat-wash"></div>
         <div class="cat-glyph">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 10h4M8 8v4M15 9h.01M18 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="2" y="6" width="20" height="12" rx="4" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
-        <div class="cat-count">12 models</div>
-        <div class="cat-name">Gaming</div>
+        <div class="cat-count">12 creations</div>
+        <div class="cat-name">Signature Celebration Cakes</div>
       </a>
 
-      <a href="categories.html#creator" class="category-card tall reveal" data-reveal data-tilt-cat style="--cc:var(--cat-creator)">
-        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Creator laptop" loading="lazy">
+      <a href="categories.html#wedding" class="category-card tall reveal" data-reveal data-tilt-cat style="--cc:#f43f5e">
+        <img class="cat-image" src="assets/cat-wedding.jpg" alt="Wedding & Tiered Cakes" loading="lazy">
         <div class="cat-wash"></div>
         <div class="cat-glyph">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.6"/></svg>
         </div>
-        <div class="cat-count">8 models</div>
-        <div class="cat-name">Creator</div>
+        <div class="cat-count">8 designs</div>
+        <div class="cat-name">Wedding &amp; Tiered Cakes</div>
       </a>
 
-      <a href="categories.html#business" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-business)">
-        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Business laptop" loading="lazy">
+      <a href="categories.html#pastries" class="category-card reveal" data-reveal data-tilt-cat style="--cc:#d97706">
+        <img class="cat-image" src="assets/cat-pastries.jpg" alt="Tarts & Pastries" loading="lazy">
         <div class="cat-wash"></div>
         <div class="cat-glyph">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <div class="cat-count">6 models</div>
-        <div class="cat-name">Business</div>
+        <div class="cat-count">14 varieties</div>
+        <div class="cat-name">Tarts &amp; Pastries</div>
       </a>
 
-      <a href="categories.html#student" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-student)">
-        <img class="cat-image" src="assets/laptop-hero.jpg" alt="Student laptop" loading="lazy">
+      <a href="categories.html#vegan" class="category-card reveal" data-reveal data-tilt-cat style="--cc:#10b981">
+        <img class="cat-image" src="assets/cat-vegan.jpg" alt="Vegan & Gluten-Free" loading="lazy">
         <div class="cat-wash"></div>
         <div class="cat-glyph">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 9l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <div class="cat-count">5 models</div>
-        <div class="cat-name">Student</div>
+        <div class="cat-count">6 selections</div>
+        <div class="cat-name">Vegan &amp; Gluten-Free</div>
       </a>
 
-      <a href="categories.html#ultrabook" class="category-card reveal" data-reveal data-tilt-cat style="--cc:var(--cat-ultrabook)">
-        <img class="cat-image" src="assets/laptop-hp.jpg" alt="Ultrabook laptop" loading="lazy">
+      <a href="categories.html#seasonal" class="category-card reveal" data-reveal data-tilt-cat style="--cc:#b87b32">
+        <img class="cat-image" src="assets/cat-seasonal.jpg" alt="Seasonal Specials" loading="lazy">
         <div class="cat-wash"></div>
         <div class="cat-glyph">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 20h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <div class="cat-count">7 models</div>
-        <div class="cat-name">Ultrabook</div>
+        <div class="cat-count">5 creations</div>
+        <div class="cat-name">Seasonal Specials</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 3. Performance Section -->
+<!-- 3. Atelier Standard Performance / Metrics Section -->
 <section class="performance-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Specs that hold up under real work.</h2>
-      <p>The same configuration across the Computer Zone Zero line, benchmarked at full load.</p>
+      <h2>ATELIER STANDARD</h2>
+      <p>Precision craftsmanship and uncompromising quality metrics built into every creation.</p>
     </div>
 
     <div class="perf-grid">
-      <div class="perf-item" data-count="32">
-        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 7V5M12 7V5M17 7V5M7 19v-2M12 19v-2M17 19v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="perf-num"><span class="num">0</span><span class="u">GB</span></div>
-        <div class="perf-label">Unified memory</div>
+      <div class="perf-item" data-count="72">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">%</span></div>
+        <div class="perf-label">Cocoa Intensity</div>
+        <div class="perf-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">Deep Belgian cocoa balanced with restrained sweetness.</div>
       </div>
-      <div class="perf-item" data-count="2">
-        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="perf-num"><span class="num">0</span><span class="u">TB</span></div>
-        <div class="perf-label">NVMe SSD storage</div>
+      <div class="perf-item" data-count="24">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">h</span></div>
+        <div class="perf-label">Fruit Infusion</div>
+        <div class="perf-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">Fresh berries rested for full aromatic depth.</div>
       </div>
-      <div class="perf-item" data-count="240">
-        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="perf-num"><span class="num">0</span><span class="u">Hz</span></div>
-        <div class="perf-label">Display refresh rate</div>
+      <div class="perf-item" data-count="100">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">%</span></div>
+        <div class="perf-label">Hand Crafted</div>
+        <div class="perf-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">Every cake finished by hand in our atelier.</div>
       </div>
-      <div class="perf-item" data-count="14">
-        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="7" y="7" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 9v6M21 9v6M9 3h6M9 21h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="perf-num"><span class="num">0</span><span class="u">core</span></div>
-        <div class="perf-label">Processor cores</div>
+      <div class="perf-item" data-count="4">
+        <div class="perf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M3 15h18" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="perf-num"><span class="num">0</span><span class="u">Tiers</span></div>
+        <div class="perf-label">Signature Layers</div>
+        <div class="perf-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">Layered for balance, texture and structure.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4. Interactive Laptop Showcase (scroll-driven) -->
+<!-- 4. Exploded Cake Showcase (scroll-driven 3D cake layers) -->
 <section class="showcase-section" id="showcaseSection">
   <div class="showcase-sticky">
     <div class="showcase-heading">
-      <h2>Watch it come together.</h2>
-      <p>Keep scrolling — this part reacts to you.</p>
+      <h2>Crafted Layer by Layer.</h2>
+      <p>From delicate sponge to velvety mousse and a final mirror finish, every layer has a purpose.</p>
     </div>
 
     <div class="showcase-stage">
       <div class="showcase-laptop" id="showcaseLaptop">
-        <div class="sc-screen">
-          <div class="sc-face">
-            <div class="sc-active-glow"></div>
-            <div class="sc-topbar"><span></span><span></span><span></span></div>
-            <div class="sc-line w1"></div>
-            <div class="sc-line w2"></div>
-            <div class="sc-graph"></div>
+        <div class="cake-3d-stage">
+          <!-- Tier 1: Crown Mirror Glaze & 24K Gold Leaf -->
+          <div class="cake-tier tier-crown">
+            <div class="tier-img-wrap">
+              <img src="assets/cake-exploded-hero.jpg" alt="Crown Mirror Glaze &amp; Gold Leaf" class="cake-tier-img crown-img" width="800" height="800" loading="eager">
+            </div>
+            <div class="tier-badge badge-crown">
+              <span class="tier-num">01</span>
+              <span class="tier-name">Mirror Glaze &amp; 24K Gold</span>
+            </div>
+          </div>
+
+          <!-- Tier 2: Belgian Ganache & Mousse -->
+          <div class="cake-tier tier-mousse">
+            <div class="tier-img-wrap">
+              <img src="assets/cake-exploded-hero.jpg" alt="Silky Belgian Ganache" class="cake-tier-img mousse-img" width="800" height="800" loading="eager">
+            </div>
+            <div class="tier-badge badge-mousse">
+              <span class="tier-num">02</span>
+              <span class="tier-name">Silky Belgian Ganache</span>
+            </div>
+          </div>
+
+          <!-- Tier 3: Wild Raspberry Compote & Vanilla Mousse -->
+          <div class="cake-tier tier-compote">
+            <div class="tier-img-wrap">
+              <img src="assets/cake-exploded-hero.jpg" alt="Vanilla Mousse &amp; Compote" class="cake-tier-img compote-img" width="800" height="800" loading="eager">
+            </div>
+            <div class="tier-badge badge-compote">
+              <span class="tier-num">03</span>
+              <span class="tier-name">Vanilla Bean Mousse &amp; Compote</span>
+            </div>
+          </div>
+
+          <!-- Tier 4: Dark Cocoa Sponge Foundation -->
+          <div class="cake-tier tier-sponge">
+            <div class="tier-img-wrap">
+              <img src="assets/cake-exploded-hero.jpg" alt="Dark Cocoa Sponge Foundation" class="cake-tier-img sponge-img" width="800" height="800" loading="eager">
+            </div>
+            <div class="tier-badge badge-sponge">
+              <span class="tier-num">04</span>
+              <span class="tier-name">Dark Cocoa Sponge Foundation</span>
+            </div>
+          </div>
+
+          <!-- Pedestal Stand -->
+          <div class="cake-pedestal-stand">
+            <span class="pedestal-label">Atelier Ceramic Cake Stand</span>
           </div>
         </div>
-        <div class="sc-base"></div>
 
-        <div class="sc-spec sc-spec-1">Core Ultra 9 · 14 cores</div>
-        <div class="sc-spec sc-spec-2">3.2K · 120Hz OLED</div>
-        <div class="sc-spec sc-spec-3">0dB fanless cooling</div>
-        <div class="sc-spec sc-spec-4">22h battery life</div>
+        <!-- Floating Annotation Pills -->
+        <div class="sc-spec sc-spec-1">Belgian Dark Cocoa</div>
+        <div class="sc-spec sc-spec-2">Silky Mirror Glaze</div>
+        <div class="sc-spec sc-spec-3">Vanilla Bean Mousse</div>
+        <div class="sc-spec sc-spec-4">Raspberry Compote</div>
       </div>
     </div>
 
@@ -372,53 +466,53 @@
   </div>
 </section>
 
-<!-- 5. Features -->
+<!-- 5. Six Culinary Pillars -->
 <section class="features-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Six decisions we didn't compromise on.</h2>
+      <h2>The Ingredients That Define Us.</h2>
     </div>
 
     <div class="features-grid">
       <div class="feature-item reveal" data-reveal data-glow>
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <h3>Performance</h3>
-        <p>14-core processors tuned to sustain full clock speeds well past the first ten minutes of load.</p>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Belgian Chocolate</h3>
+        <p>Deep, balanced cocoa with a luxurious satin finish and natural aromatics.</p>
       </div>
       <div class="feature-item reveal" data-reveal data-glow>
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <h3>Battery</h3>
-        <p>A 22-hour cell that's rated for mixed use, not a best-case idle screen with brightness at zero.</p>
+        <h3>French Butter</h3>
+        <p>Rich cultured butter for a delicate crumb structure and velvety mouthfeel.</p>
       </div>
       <div class="feature-item reveal" data-reveal data-glow>
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Display</h3>
-        <p>3.2K OLED at 120Hz, calibrated to within 1 Delta-E out of the box for color-accurate work.</p>
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Wildflower Honey</h3>
+        <p>Naturally fragrant sweetness infused with subtle floral complexity.</p>
       </div>
       <div class="feature-item reveal" data-reveal data-glow>
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-        <h3>Cooling</h3>
-        <p>A vapor chamber and zero fans, so the chassis dissipates heat silently even under sustained load.</p>
+        <h3>Seasonal Berries</h3>
+        <p>Hand-selected organic berries picked at peak ripeness for natural acidity.</p>
       </div>
       <div class="feature-item reveal" data-reveal data-glow>
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Design</h3>
-        <p>A single block of aluminum, milled rather than stamped, with no visible seams on the deck.</p>
+        <h3>Madagascar Vanilla</h3>
+        <p>Whole bourbon vanilla beans steeped slowly for a soft, comforting aroma.</p>
       </div>
       <div class="feature-item reveal" data-reveal data-glow>
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Build quality</h3>
-        <p>MIL-STD-810H tested for drops, dust, and pressure — the same standard we hold every hinge to.</p>
+        <h3>Hand-Finished</h3>
+        <p>Every creation is individually sculpted, piped, and finished by hand in our atelier.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ==========================================================
-     MODULE 4 — PERFORMANCE & TECHNOLOGY
+     MODULE 4 — CULINARY CRAFT & LAYER EXPERIENCE
 ========================================================== -->
 
-<!-- 4.3 Performance Introduction -->
+<!-- 4.3 Artisan Atelier Intro -->
 <section class="tech-intro" id="techIntro">
   <div class="tech-grid-bg"></div>
   <div class="tech-streak s1"></div>
@@ -428,247 +522,416 @@
 
   <div class="wrap tech-intro-content">
     <div class="tech-intro-text reveal" data-reveal>
-      <div class="eyebrow-line" style="justify-content:center"><span class="dot"></span><span>Performance &amp; technology</span></div>
-      <h2 class="tech-intro-heading">Engineered to perform.<br>Power that moves with you.</h2>
-      <p class="tech-intro-sub">Built for demanding work, gaming, and creative workloads — without asking you to compromise on silence or size.</p>
+      <div class="eyebrow-line" style="justify-content:center"><span class="dot"></span><span>CRAFTED IN THE ATELIER</span></div>
+      <h2 class="tech-intro-heading">Every layer is prepared<br>with patient devotion.</h2>
+      <p class="tech-intro-sub">Our cakes are built slowly, balanced carefully, and finished by hand — because the details are what make a celebration memorable.</p>
     </div>
 
     <div class="tech-intro-laptop" id="techIntroLaptop">
-      <div class="laptop">
-        <div class="laptop-screen">
-          <div class="screen-glow"></div>
-          <div class="screen-ui">
-            <div class="ui-topbar"><span></span><span></span><span></span></div>
-            <div class="ui-row wide"></div>
-            <div class="ui-row"></div>
-            <div class="ui-grid"><div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div></div>
-          </div>
-        </div>
-        <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+      <div class="cake-stand-stage">
+        <img class="cake-stand-img" src="assets/cake-hero.jpg" alt="Sculpted Artisan Cake Creation" width="800" height="600" loading="lazy">
+        <div class="cake-stand-base">Atelier Handcrafted Creation</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.4 Animated Performance Metrics -->
+<!-- 4.4 Animated Flavor & Texture Metrics -->
 <section class="metrics-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>The numbers behind the feel.</h2>
-      <p>Hover any metric for what it actually changes in day-to-day use.</p>
+      <h2>THE BALANCE OF FLAVOR</h2>
+      <p>Four precise ratios that define our signature taste profile.</p>
     </div>
 
     <div class="metrics-grid">
-      <div class="metric-card" data-count="14">
-        <div class="metric-value"><span class="num">0</span><span class="u">core</span></div>
-        <div class="metric-label">Processor cores</div>
-        <div class="metric-desc">Enough parallel headroom to compile, render, and keep forty browser tabs open without a stutter.</div>
+      <div class="metric-card" data-count="72">
+        <div class="metric-value"><span class="num">0</span><span class="u">%</span></div>
+        <div class="metric-label">Dark Cocoa</div>
+        <div class="metric-desc">Rich Belgian chocolate intensity, providing a deep, luxurious cocoa foundation.</div>
       </div>
-      <div class="metric-card" data-count="32">
-        <div class="metric-value"><span class="num">0</span><span class="u">GB</span></div>
-        <div class="metric-label">Unified RAM</div>
-        <div class="metric-desc">Room for large creative files and multiple virtual machines to sit in memory at once.</div>
+      <div class="metric-card" data-count="28">
+        <div class="metric-value"><span class="num">0</span><span class="u">%</span></div>
+        <div class="metric-label">Berry Brightness</div>
+        <div class="metric-desc">Natural fruit acidity to balance richness and refresh the palate.</div>
       </div>
-      <div class="metric-card" data-count="2">
-        <div class="metric-value"><span class="num">0</span><span class="u">TB</span></div>
-        <div class="metric-label">NVMe storage</div>
-        <div class="metric-desc">Read speeds fast enough that loading a project feels the same as opening a text file.</div>
+      <div class="metric-card" data-count="4">
+        <div class="metric-value"><span class="num">0</span><span class="u">Tiers</span></div>
+        <div class="metric-label">Balanced Layers</div>
+        <div class="metric-desc">Harmonious contrast between velvet mousse, moist sponge, and crisp base.</div>
       </div>
-      <div class="metric-card" data-count="240">
-        <div class="metric-value"><span class="num">0</span><span class="u">Hz</span></div>
-        <div class="metric-label">Display refresh</div>
-        <div class="metric-desc">Ultra-smooth motion for gaming and high-frame-rate video, with no visible tearing.</div>
+      <div class="metric-card" data-count="24">
+        <div class="metric-value"><span class="num">0</span><span class="u">h</span></div>
+        <div class="metric-label">Flavor Infusion</div>
+        <div class="metric-desc">Slow steeping of vanilla and fruit reductions for maximum aromatic depth.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.5 CPU / GPU Technology -->
+<!-- 4.5 Flavor Architecture -->
 <section class="silicon-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Two chips, tuned to work as one.</h2>
+      <h2>FLAVOR ARCHITECTURE</h2>
+      <p>Two complementary elements tuned to create a single unforgettable harmony.</p>
     </div>
 
     <div class="silicon-split reveal" data-reveal>
       <div class="silicon-panel cpu">
         <div class="silicon-wash"></div>
-        <div class="silicon-kicker">CPU</div>
-        <h3 class="silicon-title">14-core processor</h3>
+        <div class="silicon-kicker">CORE</div>
+        <h3 class="silicon-title">THE GANACHE CORE</h3>
+        <p style="font-size:13.5px; color:#d1c2b0; margin-bottom:18px; line-height:1.5;">Deep Belgian chocolate balanced with silky cream, creating the rich center of the experience.</p>
         <div class="silicon-specs">
-          <div class="silicon-spec-row"><span>Core count</span><b>14 cores, 20 threads</b></div>
-          <div class="silicon-spec-row"><span>Clock speed</span><b>Up to 5.1GHz boost</b></div>
-          <div class="silicon-spec-row"><span>Multitasking</span><b>Handles 30+ apps at once</b></div>
-          <div class="silicon-spec-row"><span>AI processing</span><b>45 TOPS on-chip NPU</b></div>
+          <div class="silicon-spec-row"><span>Cocoa origin</span><b>70% Dark Valrhona</b></div>
+          <div class="silicon-spec-row"><span>Tempering</span><b>Precision 31°C snap</b></div>
+          <div class="silicon-spec-row"><span>Texture</span><b>Satin Smooth Mousse</b></div>
+          <div class="silicon-spec-row"><span>Finish</span><b>High-Gloss Ganache</b></div>
         </div>
-        <span class="silicon-more">Learn more<span class="arrow">→</span></span>
+        <span class="silicon-more">Explore Core<span class="arrow">→</span></span>
       </div>
       <div class="silicon-panel gpu">
         <div class="silicon-wash"></div>
-        <div class="silicon-kicker">GPU</div>
-        <h3 class="silicon-title">RTX-class graphics</h3>
+        <div class="silicon-kicker">CONTRAST</div>
+        <h3 class="silicon-title">THE FRUIT COUNTERPOINT</h3>
+        <p style="font-size:13.5px; color:#d1c2b0; margin-bottom:18px; line-height:1.5;">Bright seasonal berries introduce acidity and freshness, keeping every bite balanced.</p>
         <div class="silicon-specs">
-          <div class="silicon-spec-row"><span>Graphics performance</span><b>16GB dedicated VRAM</b></div>
-          <div class="silicon-spec-row"><span>Ray tracing</span><b>3rd-gen RT cores</b></div>
-          <div class="silicon-spec-row"><span>Rendering</span><b>Up to 2.4x faster exports</b></div>
-          <div class="silicon-spec-row"><span>Gaming</span><b>240fps at QHD</b></div>
+          <div class="silicon-spec-row"><span>Fruit origin</span><b>Organic Raspberries</b></div>
+          <div class="silicon-spec-row"><span>Reduction</span><b>Slow Copper Kettle</b></div>
+          <div class="silicon-spec-row"><span>Acidity</span><b>Natural Yuzu Zest</b></div>
+          <div class="silicon-spec-row"><span>Maceration</span><b>24-Hour Steep</b></div>
         </div>
-        <span class="silicon-more">Learn more<span class="arrow">→</span></span>
+        <span class="silicon-more">Explore Contrast<span class="arrow">→</span></span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.6 Display Technology -->
+<!-- 4.6 Sculptural Cake Detail -->
 <section class="display-section" id="displaySection">
   <div class="display-sticky">
-    <h2 class="display-heading" id="displayHeading">See every detail.</h2>
+    <h2 class="display-heading" id="displayHeading">THE FINISHING TOUCH<br><span style="font-size:0.65em; font-weight:400; opacity:0.85;">Details Worth Discovering.</span></h2>
     <div class="display-frame" id="displayFrame">
       <div class="display-screen">
         <div class="display-ambient"></div>
         <div class="display-product-wrap">
-          <img class="display-product" id="displayProduct" src="assets/laptop-hero.jpg" alt="Premium open laptop product" width="900" height="675" loading="lazy" decoding="async">
+          <img class="display-product" id="displayProduct" src="assets/cake-hero.jpg" alt="Artisan Cake Craft Detail" width="900" height="675" loading="lazy" decoding="async">
         </div>
         <div class="display-hotspots" id="displaySpecs">
-          <span class="display-hotspot hotspot-battery"><i></i>22h Battery Life</span>
-          <span class="display-hotspot hotspot-display"><i></i>2.8K OLED Display</span>
-          <span class="display-hotspot hotspot-weight"><i></i>1.2kg Lightweight</span>
-          <span class="display-hotspot hotspot-cooling"><i></i>Fanless Cooling Core</span>
+          <span class="display-hotspot hotspot-battery"><i></i>MIRROR GLAZE</span>
+          <span class="display-hotspot hotspot-display"><i></i>24K GOLD LEAF</span>
+          <span class="display-hotspot hotspot-weight"><i></i>FRESH BERRIES</span>
+          <span class="display-hotspot hotspot-cooling"><i></i>SILKY GANACHE</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.7 Cooling Technology -->
+<!-- 4.7 Precision Craft -->
 <section class="cooling-section">
   <div class="wrap cooling-grid">
     <div class="cooling-copy">
       <div class="section-head reveal" data-reveal style="margin-bottom:0;display:block;">
-        <h2>Airflow, engineered like a wind tunnel.</h2>
-        <p style="margin-top:14px;">No fans doesn't mean no cooling — it means the heat pipe network is doing all the work.</p>
+        <h2>PRECISION IN EVERY STEP</h2>
+        <p style="margin-top:14px;">Controlled temperature, timing, and technique transform simple ingredients into edible art.</p>
       </div>
       <ul class="cooling-list reveal" data-reveal>
-        <li><span class="dot"></span><span><b>Vapor chamber:</b> spreads heat across the full chassis instead of one hot spot.</span></li>
-        <li><span class="dot"></span><span><b>Dual heat pipes:</b> carry warmth away from the CPU and GPU simultaneously.</span></li>
-        <li><span class="dot"></span><span><b>Passive exhaust:</b> heat exits through the hinge, with no moving parts to wear out.</span></li>
+        <li><span class="dot"></span><span><b>TEMPERING:</b> Chocolate is carefully tempered for a precise snap and satin finish.</span></li>
+        <li><span class="dot"></span><span><b>INFUSION:</b> Fruit and aromatics are rested for 24 hours to develop deeper flavor.</span></li>
+        <li><span class="dot"></span><span><b>AERATION:</b> Whipped cream and mousses are aerated for a light, velvety texture.</span></li>
       </ul>
     </div>
 
     <div class="cooling-visual" data-reveal-tilt>
-      <div class="cooling-label">Laptop internals</div>
+      <div class="cooling-label">Artisan Process Architecture</div>
       <div class="cooling-diagram">
-        <div class="heat-block">CPU</div>
+        <div class="heat-block">Cocoa</div>
         <div class="pipe"></div>
         <div class="fan-wrap">
-          <svg class="fan" viewBox="0 0 66 66"><g class="blade"><ellipse cx="33" cy="18" rx="6" ry="14" fill="var(--accent-dim)"/><ellipse cx="33" cy="48" rx="6" ry="14" fill="var(--accent-dim)"/><ellipse cx="18" cy="33" rx="14" ry="6" fill="var(--accent-dim)"/><ellipse cx="48" cy="33" rx="14" ry="6" fill="var(--accent-dim)"/><circle cx="33" cy="33" r="5" fill="var(--accent)"/></g><circle cx="33" cy="33" r="31" stroke="var(--line)" stroke-width="1.5" fill="none"/></svg>
-          <span class="fan-label">Exhaust fan</span>
+          <svg class="fan" viewBox="0 0 66 66"><g class="blade"><ellipse cx="33" cy="18" rx="6" ry="14" fill="var(--cake-gold)"/><ellipse cx="33" cy="48" rx="6" ry="14" fill="var(--cake-gold)"/><ellipse cx="18" cy="33" rx="14" ry="6" fill="var(--cake-gold)"/><ellipse cx="48" cy="33" rx="14" ry="6" fill="var(--cake-gold)"/><circle cx="33" cy="33" r="5" fill="#f5ebd9"/></g><circle cx="33" cy="33" r="31" stroke="rgba(229,169,88,0.3)" stroke-width="1.5" fill="none"/></svg>
+          <span class="fan-label">Aeration Whisk</span>
         </div>
         <div class="pipe"></div>
-        <div class="heat-block">GPU</div>
+        <div class="heat-block">Cream</div>
       </div>
       <div class="airflow-row">
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--cake-gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--cake-gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--cake-gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h12M9 1l4 4-4 4" stroke="var(--cake-gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <div class="exhaust-note">Airflow exits through the rear hinge vent</div>
+      <div class="exhaust-note">Continuous temperature regulation throughout preparation</div>
     </div>
   </div>
 </section>
 
-<!-- 4.8 Battery & Connectivity -->
+<!-- 4.8 Freshness & Delivery -->
 <section class="strip-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Battery and connectivity, at a glance.</h2>
+      <h2>FROM OUR OVEN TO YOUR TABLE</h2>
+      <p>Four guarantees of fresh artisanal excellence.</p>
     </div>
 
     <div class="strip-grid">
       <div class="strip-card" data-reveal>
-        <div class="strip-head"><span>Battery</span><span class="strip-value" style="font-size:15px;">18 hrs</span></div>
-        <div class="battery-shell"><div class="battery-fill"></div></div>
+        <div class="strip-head"><span>Preparation</span><span class="strip-value" style="font-size:15px; color:#e5a958;">FRESHLY BAKED</span></div>
+        <div class="battery-shell"><div class="battery-fill" style="background:linear-gradient(90deg, #b87b32, #e5a958);"></div></div>
       </div>
 
       <div class="strip-card" data-reveal>
-        <div class="strip-head"><span>Wireless</span><span class="strip-value" style="font-size:15px;">Wi-Fi 7</span></div>
+        <div class="strip-head"><span>Protection</span><span class="strip-value" style="font-size:15px; color:#e5a958;">CAREFULLY PACKAGED</span></div>
         <div class="wifi-rings">
           <svg width="70" height="46" viewBox="0 0 70 46">
-            <path class="ring r1" d="M35 40a10 10 0 0110-10" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <path class="ring r2" d="M35 40a18 18 0 0118-18" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <path class="ring r3" d="M35 40a26 26 0 0126-26" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <circle cx="35" cy="40" r="3" fill="var(--accent)"/>
+            <path class="ring r1" d="M35 40a10 10 0 0110-10" stroke="#e5a958" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path class="ring r2" d="M35 40a18 18 0 0118-18" stroke="#e5a958" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path class="ring r3" d="M35 40a26 26 0 0126-26" stroke="#e5a958" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <circle cx="35" cy="40" r="3" fill="#e5a958"/>
           </svg>
         </div>
       </div>
 
       <div class="strip-card" data-reveal>
-        <div class="strip-head"><span>Connectivity</span><span class="strip-value" style="font-size:15px;">USB-C</span></div>
+        <div class="strip-head"><span>Service</span><span class="strip-value" style="font-size:15px; color:#e5a958;">ATELIER DELIVERY</span></div>
         <div class="ports-row">
-          <div class="port-chip">Thunderbolt 5</div>
-          <div class="port-chip">HDMI 2.1</div>
-          <div class="port-chip">USB-C ×2</div>
+          <div class="port-chip" style="border-color:rgba(229,169,88,0.3); color:#f5ebd9;">Custom Box</div>
+          <div class="port-chip" style="border-color:rgba(229,169,88,0.3); color:#f5ebd9;">Temp Controlled</div>
+          <div class="port-chip" style="border-color:rgba(229,169,88,0.3); color:#f5ebd9;">White Glove</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.9 Interactive Laptop Showcase — Module 4 hero -->
-<section class="power-showcase" id="powerShowcase">
-  <div class="power-sticky">
-    <div class="power-stage">
-      <div class="power-laptop" id="powerLaptop">
-        <div class="power-lid" id="powerLid">
-          <div class="power-screen"><div class="power-face"><div class="glow"></div></div></div>
-        </div>
-        <div class="power-base"></div>
-      </div>
+<!-- 4. Interactive Luxury Cake Configurator (The Cake Atelier) -->
+<section class="atelier-section" id="powerShowcase">
+  <div class="wrap">
+    <div class="section-head reveal" data-reveal style="text-align:center; margin-bottom:54px;">
+      <div class="eyebrow-line" style="justify-content:center"><span class="dot"></span><span>THE CAKE ATELIER</span></div>
+      <h2 style="font-family:var(--font-display); font-weight:600; font-size:clamp(28px,3.8vw,44px); margin:10px 0 12px;">Compose Your Signature Cake.</h2>
+      <p style="color:var(--muted); font-size:16px; max-width:540px; margin:0 auto;">Choose each element of your creation — from the foundation to the final hand-finished detail.</p>
     </div>
 
-    <div class="power-panel">
-      <div class="power-steps">
-        <div class="power-step" data-step="0">
-          <div class="p-title">Performance</div>
-          <div class="p-desc">A 14-core processor built to sustain full clock speed well past the first ten minutes.</div>
+    <div class="atelier-configurator-grid">
+      <!-- LEFT: Frameless 3D Cake Visual Preview -->
+      <div class="atelier-stage-wrap">
+        <div class="power-stage">
+          <div class="power-laptop" id="powerLaptop">
+            <div class="power-lid" id="powerLid">
+              <div class="power-screen">
+                <div class="power-face">
+                  <div class="glow"></div>
+                  <img src="assets/cake-exploded-hero.jpg" alt="Custom Artisan Cake Preview" id="configuratorCakeImg" class="power-cake-img" width="700" height="700" loading="eager">
+                  <div class="configurator-overlay" id="configuratorOverlay"></div>
+                </div>
+              </div>
+            </div>
+            <div class="power-base">
+              <span class="pedestal-label" id="configuratorPedestalLabel">Atelier Ceramic Cake Stand — 8–10 Guests</span>
+            </div>
+          </div>
         </div>
-        <div class="power-step" data-step="1">
-          <div class="p-title">Graphics</div>
-          <div class="p-desc">RTX-class rendering with dedicated VRAM for real-time ray tracing and fast exports.</div>
+
+        <div class="atelier-preview-meta">
+          <span class="preview-tag">LIVE ATELIER PREVIEW</span>
+          <span class="preview-name" id="configuratorPreviewTitle">Belgian Dark Cocoa &amp; Wild Raspberry</span>
         </div>
-        <div class="power-step" data-step="2">
-          <div class="p-title">Display</div>
-          <div class="p-desc">A 240Hz OLED panel with a 1ms response time and full DCI-P3 color coverage.</div>
+      </div>
+
+      <!-- RIGHT: Interactive Configuration Options Panel -->
+      <div class="atelier-controls-panel">
+        <!-- 1. Foundation -->
+        <div class="config-group" data-group="base">
+          <div class="config-group-header">
+            <span class="group-num">01</span>
+            <span class="group-title">FOUNDATION</span>
+            <span class="group-selected" id="sel-base">Dark Cocoa</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn active" data-group="base" data-value="dark-cocoa" data-label="Dark Cocoa">
+              <span class="btn-title">Dark Cocoa</span>
+              <span class="btn-desc">Belgian cocoa sponge</span>
+            </button>
+            <button type="button" class="config-btn" data-group="base" data-value="vanilla" data-label="Vanilla Bean">
+              <span class="btn-title">Vanilla Bean</span>
+              <span class="btn-desc">Bourbon vanilla sponge</span>
+            </button>
+            <button type="button" class="config-btn" data-group="base" data-value="almond" data-label="Almond Praline">
+              <span class="btn-title">Almond Praline</span>
+              <span class="btn-desc">Toasted almond dacquoise</span>
+            </button>
+          </div>
         </div>
-        <div class="power-step" data-step="3">
-          <div class="p-title">Cooling</div>
-          <div class="p-desc">Dual heat pipes and a vapor chamber keep everything silent — zero fans, zero noise.</div>
+
+        <!-- 2. Mousse & Filling -->
+        <div class="config-group" data-group="mousse">
+          <div class="config-group-header">
+            <span class="group-num">02</span>
+            <span class="group-title">MOUSSE &amp; FILLING</span>
+            <span class="group-selected" id="sel-mousse">Belgian Ganache</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn active" data-group="mousse" data-value="belgian-ganache" data-label="Belgian Ganache">
+              <span class="btn-title">Belgian Ganache</span>
+              <span class="btn-desc">70% Dark chocolate mousse</span>
+            </button>
+            <button type="button" class="config-btn" data-group="mousse" data-value="vanilla-mousse" data-label="Vanilla Bean Mousse">
+              <span class="btn-title">Vanilla Mousse</span>
+              <span class="btn-desc">Madagascar vanilla mousse</span>
+            </button>
+            <button type="button" class="config-btn" data-group="mousse" data-value="raspberry-mousse" data-label="Raspberry Mousse">
+              <span class="btn-title">Raspberry Mousse</span>
+              <span class="btn-desc">Whipped berry mousse</span>
+            </button>
+            <button type="button" class="config-btn" data-group="mousse" data-value="saffron-velvet" data-label="Saffron Velvet">
+              <span class="btn-title">Saffron Velvet</span>
+              <span class="btn-desc">Infused velvet cream</span>
+            </button>
+          </div>
         </div>
-        <div class="power-step" data-step="4">
-          <div class="p-title">Battery</div>
-          <div class="p-desc">18 hours of real, mixed use — video calls, code, and creative tools included.</div>
+
+        <!-- 3. Fruit & Compote -->
+        <div class="config-group" data-group="fruit">
+          <div class="config-group-header">
+            <span class="group-num">03</span>
+            <span class="group-title">FRUIT &amp; COMPOTE</span>
+            <span class="group-selected" id="sel-fruit">Wild Raspberry</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn active" data-group="fruit" data-value="raspberry" data-label="Wild Raspberry">
+              <span class="btn-title">Wild Raspberry</span>
+              <span class="btn-desc">24h Steeped compote</span>
+            </button>
+            <button type="button" class="config-btn" data-group="fruit" data-value="strawberry" data-label="Fresh Strawberry">
+              <span class="btn-title">Fresh Strawberry</span>
+              <span class="btn-desc">Macerated berry layer</span>
+            </button>
+            <button type="button" class="config-btn" data-group="fruit" data-value="yuzu" data-label="Passionfruit Yuzu">
+              <span class="btn-title">Passionfruit Yuzu</span>
+              <span class="btn-desc">Citrus reduction curd</span>
+            </button>
+            <button type="button" class="config-btn" data-group="fruit" data-value="none" data-label="No Fruit">
+              <span class="btn-title">No Fruit</span>
+              <span class="btn-desc">Pure cocoa focus</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Finish -->
+        <div class="config-group" data-group="finish">
+          <div class="config-group-header">
+            <span class="group-num">04</span>
+            <span class="group-title">FINISH</span>
+            <span class="group-selected" id="sel-finish">Dark Mirror Glaze</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn active" data-group="finish" data-value="mirror-glaze" data-label="Dark Mirror Glaze">
+              <span class="btn-title">Dark Mirror Glaze</span>
+              <span class="btn-desc">High-gloss cocoa (+ $15)</span>
+            </button>
+            <button type="button" class="config-btn" data-group="finish" data-value="velvet-finish" data-label="Velvet Cocoa">
+              <span class="btn-title">Velvet Cocoa</span>
+              <span class="btn-desc">Sprayed cocoa (+ $10)</span>
+            </button>
+            <button type="button" class="config-btn" data-group="finish" data-value="ivory-cream" data-label="Ivory Cream">
+              <span class="btn-title">Ivory Cream</span>
+              <span class="btn-desc">Smooth buttercream</span>
+            </button>
+            <button type="button" class="config-btn" data-group="finish" data-value="gold-accent" data-label="Gold Accent">
+              <span class="btn-title">Gold Accent</span>
+              <span class="btn-desc">24K Gold detail (+ $25)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Decoration -->
+        <div class="config-group" data-group="decoration">
+          <div class="config-group-header">
+            <span class="group-num">05</span>
+            <span class="group-title">DECORATION</span>
+            <span class="group-selected" id="sel-decoration">24K Gold Leaf</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn active" data-group="decoration" data-value="24k-gold" data-label="24K Gold Leaf">
+              <span class="btn-title">24K Gold Leaf</span>
+              <span class="btn-desc">Edible gold leaf</span>
+            </button>
+            <button type="button" class="config-btn" data-group="decoration" data-value="berries" data-label="Fresh Berries">
+              <span class="btn-title">Fresh Berries</span>
+              <span class="btn-desc">Organic berries</span>
+            </button>
+            <button type="button" class="config-btn" data-group="decoration" data-value="chocolate-curls" data-label="Chocolate Curls">
+              <span class="btn-title">Chocolate Curls</span>
+              <span class="btn-desc">Sculpted ribbons</span>
+            </button>
+            <button type="button" class="config-btn" data-group="decoration" data-value="minimalist" data-label="Minimalist">
+              <span class="btn-title">Minimalist</span>
+              <span class="btn-desc">Clean architectural edge</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Size -->
+        <div class="config-group" data-group="size">
+          <div class="config-group-header">
+            <span class="group-num">06</span>
+            <span class="group-title">SERVING SIZE</span>
+            <span class="group-selected" id="sel-size">8–10 Guests</span>
+          </div>
+          <div class="config-options">
+            <button type="button" class="config-btn" data-group="size" data-value="6-8" data-label="6–8 Guests">
+              <span class="btn-title">6–8 Guests</span>
+              <span class="btn-desc">6" Tier ($120)</span>
+            </button>
+            <button type="button" class="config-btn active" data-group="size" data-value="8-10" data-label="8–10 Guests">
+              <span class="btn-title">8–10 Guests</span>
+              <span class="btn-desc">8" Tier ($165)</span>
+            </button>
+            <button type="button" class="config-btn" data-group="size" data-value="10-12" data-label="10–12 Guests">
+              <span class="btn-title">10–12 Guests</span>
+              <span class="btn-desc">10" Tier ($205)</span>
+            </button>
+            <button type="button" class="config-btn" data-group="size" data-value="12-16" data-label="12–16 Guests">
+              <span class="btn-title">12–16 Guests</span>
+              <span class="btn-desc">Multi-tier ($245)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Price & Primary CTA Box -->
+        <div class="configurator-price-box">
+          <div class="price-details">
+            <span class="price-label">Estimated Creation Price</span>
+            <div class="price-amount"><span class="currency">$</span><span id="configuratorTotalPrice">175</span></div>
+          </div>
+          <div class="cta-action-wrap">
+            <a href="contact.html" class="btn btn-primary btn-lg" id="reserveCreationBtn">Reserve This Creation</a>
+            <a href="contact.html#consultation" class="btn btn-ghost">Consult the Atelier</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4.10 Technology Summary -->
+<!-- Live Composition Summary -->
 <section class="summary-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Every spec, in one place.</h2>
+      <h2>YOUR COMPOSITION</h2>
+      <p>Every custom element harmonized for your upcoming celebration.</p>
     </div>
     <div class="summary-grid">
-      <div class="summary-item" data-reveal><div class="summary-label">Processor</div><div class="summary-value">14-Core</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Graphics</div><div class="summary-value">RTX GPU</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Memory</div><div class="summary-value">32GB</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Storage</div><div class="summary-value">2TB SSD</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Display</div><div class="summary-value">240Hz OLED</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Battery</div><div class="summary-value">18 Hours</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Connectivity</div><div class="summary-value">Wi-Fi 7</div></div>
-      <div class="summary-item" data-reveal><div class="summary-label">Build</div><div class="summary-value">Aluminum unibody</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Foundation</div><div class="summary-value" id="sum-base" style="font-size:17px; color:#e5a958;">Dark Cocoa</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Mousse &amp; Filling</div><div class="summary-value" id="sum-mousse" style="font-size:17px; color:#e5a958;">Belgian Ganache</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Fruit Element</div><div class="summary-value" id="sum-fruit" style="font-size:17px; color:#e5a958;">Wild Raspberry</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Finish Glaze</div><div class="summary-value" id="sum-finish" style="font-size:17px; color:#e5a958;">Dark Mirror Glaze</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Garnish / Decoration</div><div class="summary-value" id="sum-decoration" style="font-size:17px; color:#e5a958;">24K Gold Leaf</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Serving Capacity</div><div class="summary-value" id="sum-size" style="font-size:17px; color:#e5a958;">8–10 Guests</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Flavor Profile</div><div class="summary-value" id="sum-profile" style="font-size:17px; color:#e5a958;">Rich • Tart • Silky</div></div>
+      <div class="summary-item" data-reveal><div class="summary-label">Total Estimate</div><div class="summary-value" id="sum-total" style="font-size:17px; color:#e5a958;">$175</div></div>
     </div>
   </div>
 </section>
@@ -681,63 +944,63 @@
 <section class="why-section">
   <div class="wrap">
     <div class="section-head reveal" data-reveal>
-      <h2>Why people switch to Computer Zone.</h2>
-      <p>Six decisions that show up the first week you own one, not just on a spec sheet.</p>
+      <h2>Why guests choose La Maison Sucre.</h2>
+      <p>Six principles that define every creation that leaves our atelier.</p>
     </div>
 
     <div class="why-list">
       <div class="why-item" data-reveal>
         <span class="why-index">01</span>
-        <span class="why-title">Premium performance</span>
-        <span class="why-desc">14-core processors that hold their clock speed under sustained, real workloads.</span>
+        <span class="why-title">Pure Ingredients</span>
+        <span class="why-desc">100% natural, ethically sourced Belgian cocoa, French butter, and Madagascar vanilla.</span>
       </div>
       <div class="why-item" data-reveal>
         <span class="why-index">02</span>
-        <span class="why-title">Latest technology</span>
-        <span class="why-desc">Thunderbolt 5, Wi-Fi 7, and the newest silicon, shipped the same quarter it's ready.</span>
+        <span class="why-title">Artisanal Craft</span>
+        <span class="why-desc">Hand-finished by master pastry chefs with patient devotion to every tier.</span>
       </div>
       <div class="why-item" data-reveal>
         <span class="why-index">03</span>
-        <span class="why-title">Exceptional display</span>
-        <span class="why-desc">3.2K OLED panels calibrated to within 1 Delta-E, straight out of the box.</span>
+        <span class="why-title">Balanced Palette</span>
+        <span class="why-desc">Restrained sweetness allowing complex dark cocoa and fresh fruit notes to shine.</span>
       </div>
       <div class="why-item" data-reveal>
         <span class="why-index">04</span>
-        <span class="why-title">Long battery life</span>
-        <span class="why-desc">22 hours of mixed use — rated with the screen on and real applications running.</span>
+        <span class="why-title">Fresh Daily</span>
+        <span class="why-desc">Handcrafted within 24 hours of your occasion for peak flavor and velvety texture.</span>
       </div>
       <div class="why-item" data-reveal>
         <span class="why-index">05</span>
-        <span class="why-title">Reliable build</span>
-        <span class="why-desc">A single block of milled aluminum, MIL-STD-810H tested for drops, dust, and pressure.</span>
+        <span class="why-title">Atelier Presentation</span>
+        <span class="why-desc">Bespoke luxury presentation packaging designed to preserve quality and delight.</span>
       </div>
       <div class="why-item" data-reveal>
         <span class="why-index">06</span>
-        <span class="why-title">Premium experience</span>
-        <span class="why-desc">Support that picks up, a two-year warranty as standard, and firmware updates for six years.</span>
+        <span class="why-title">Bespoke Celebrations</span>
+        <span class="why-desc">Custom flavor consultations and 3D architectural cake designs tailored to your event.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Brand / Ecosystem Marquee -->
+<!-- 2. Brand / Press Marquee -->
 <section class="marquee-section">
   <div class="wrap marquee-head">
-    <h2>Plays well with the setup you already have.</h2>
-    <p>Standard ports and display protocols mean Computer Zone slots in next to hardware from any of these brands.</p>
+    <h2>Celebrated by premier culinary &amp; lifestyle press.</h2>
+    <p>Honored across international gastronomy, luxury design, and wedding publications.</p>
   </div>
 
   <div class="marquee-fade">
     <div class="marquee-row">
       <div class="marquee-track">
-        <span>ASUS</span><span>LENOVO</span><span>HP</span><span>DELL</span><span>ACER</span><span>MSI</span><span>APPLE</span><span>RAZER</span>
-        <span>ASUS</span><span>LENOVO</span><span>HP</span><span>DELL</span><span>ACER</span><span>MSI</span><span>APPLE</span><span>RAZER</span>
+        <span>VOGUE GOURMET</span><span>GASTRONOMIE</span><span>ELLE DECOR</span><span>MICHELIN GUIDE</span><span>ATELIER MAGAZINE</span><span>LUXURY PATISSERIE</span>
+        <span>VOGUE GOURMET</span><span>GASTRONOMIE</span><span>ELLE DECOR</span><span>MICHELIN GUIDE</span><span>ATELIER MAGAZINE</span><span>LUXURY PATISSERIE</span>
       </div>
     </div>
     <div class="marquee-row">
       <div class="marquee-track reverse">
-        <span>RAZER</span><span>APPLE</span><span>MSI</span><span>ACER</span><span>DELL</span><span>HP</span><span>LENOVO</span><span>ASUS</span>
-        <span>RAZER</span><span>APPLE</span><span>MSI</span><span>ACER</span><span>DELL</span><span>HP</span><span>LENOVO</span><span>ASUS</span>
+        <span>LUXURY PATISSERIE</span><span>ATELIER MAGAZINE</span><span>MICHELIN GUIDE</span><span>ELLE DECOR</span><span>GASTRONOMIE</span><span>VOGUE GOURMET</span>
+        <span>LUXURY PATISSERIE</span><span>ATELIER MAGAZINE</span><span>MICHELIN GUIDE</span><span>ELLE DECOR</span><span>GASTRONOMIE</span><span>VOGUE GOURMET</span>
       </div>
     </div>
   </div>
@@ -748,27 +1011,18 @@
   <div class="cta-bg-blob cta-blob-1"></div>
   <div class="cta-bg-blob cta-blob-2"></div>
   <canvas id="ctaParticles"></canvas>
-  <div class="cta-laptop-wrap">
-    <div class="laptop cta-laptop">
-      <div class="laptop-screen">
-        <div class="screen-glow"></div>
-        <div class="screen-ui">
-          <div class="ui-topbar"><span></span><span></span><span></span></div>
-          <div class="ui-row wide"></div>
-          <div class="ui-row"></div>
-          <div class="ui-grid"><div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div></div>
-        </div>
-      </div>
-      <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+  <div class="cta-laptop-wrap" style="opacity:0.05;">
+    <div class="cake-stand-stage" style="transform:scale(1.5);">
+      <div class="cake-stand-base">La Maison Sucre</div>
     </div>
   </div>
 
   <div class="wrap cta-content">
-    <div class="cta-eyebrow"><span class="dot"></span><span>Free shipping, every order</span></div>
-    <h2 class="cta-heading">Ready to upgrade<br>your setup?</h2>
+    <div class="cta-eyebrow"><span class="dot"></span><span>Temperature-controlled white-glove delivery</span></div>
+    <h2 class="cta-heading">Ready to craft your<br>signature celebration cake?</h2>
     <div class="cta-buttons">
-      <a href="laptops.html" class="btn btn-primary btn-lg">Explore laptops</a>
-      <a href="categories.html" class="btn btn-ghost btn-lg">View collection</a>
+      <a href="categories.html" class="btn btn-primary btn-lg">Explore Cake Collection</a>
+      <a href="contact.html" class="btn btn-ghost btn-lg">Reserve Consultation</a>
     </div>
   </div>
 </section>
@@ -778,38 +1032,38 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="logo"><span class="logo-mark"></span>Computer Zone</a>
-        <p>Premium, fanless computing — engineered as one unibody, from the hinge to the heatsink.</p>
+        <a href="index.html" class="logo"><span class="logo-mark"></span>La Maison Sucre</a>
+        <p>Luxury Artisan Patisserie &amp; Custom 3D Cakes — Crafting edible art for extraordinary moments.</p>
         <div class="footer-social">
-          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="Computer Zone on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg></a>
+          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="La Maison Sucre on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="La Maison Sucre on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="La Maison Sucre on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg></a>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>Products</h4>
+        <h4>Creations</h4>
         <ul>
-          <li><a href="categories.html#gaming">Gaming</a></li>
-          <li><a href="categories.html#business">Business</a></li>
-          <li><a href="categories.html#creator">Creator</a></li>
-          <li><a href="categories.html#student">Student</a></li>
+          <li><a href="categories.html#signature">Signature Cakes</a></li>
+          <li><a href="categories.html#wedding">Wedding Tiers</a></li>
+          <li><a href="categories.html#pastries">Artisan Pastries</a></li>
+          <li><a href="categories.html#seasonal">Seasonal Collection</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4>Atelier</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#support">Support</a></li>
-          <li><a href="contact.html#privacy">Privacy</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Consultations</a></li>
+          <li><a href="contact.html#delivery">Delivery Info</a></li>
+          <li><a href="contact.html#privacy">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Computer Zone. All rights reserved.</span>
+      <span>© 2026 La Maison Sucre. All rights reserved.</span>
       <div class="footer-legal">
         <a href="contact.html#terms">Terms</a>
         <a href="contact.html#privacy">Privacy</a>
@@ -819,7 +1073,7 @@
   </div>
 </footer>
 
-<script>
+<script>(function() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
@@ -842,8 +1096,8 @@
   });
   searchInput.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter') return;
-    const query = searchInput.value.trim();
-    window.location.href = query ? `laptops.html?search=${encodeURIComponent(query)}` : 'laptops.html';
+    const query = searchInput.value.trim().toLowerCase();
+    if (query) window.location.href = `categories.html?search=${encodeURIComponent(query)}`;
   });
 
   /* Mobile menu */
@@ -858,22 +1112,52 @@
     mobilePanel.classList.remove('open');
   }));
 
-  /* Mouse parallax: laptop tilt + cursor glow + badge drift */
+  /* Mouse parallax & click rotation: 3D cake tilt + cursor glow + badge drift */
   const heroVisual = document.getElementById('heroVisual');
   const laptop = document.getElementById('laptop');
   const cursorGlow = document.getElementById('cursorGlow');
   const badges = document.querySelectorAll('.badge');
+  let inlineSpinFrame;
+  let inlineIsSpinning = false;
 
-  if (!isTouch && !reduceMotion) {
+  if (laptop) {
+    laptop.addEventListener('click', () => {
+      if (reduceMotion || inlineIsSpinning) return;
+      inlineIsSpinning = true;
+      cancelAnimationFrame(inlineSpinFrame);
+      const start = performance.now();
+      const duration = 1600;
+
+      function rotate(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        laptop.style.setProperty('--spin', (easedProgress * 360) + 'deg');
+        if (progress < 1) {
+          inlineSpinFrame = requestAnimationFrame(rotate);
+        } else {
+          laptop.style.setProperty('--spin', '0deg');
+          inlineIsSpinning = false;
+        }
+      }
+
+      inlineSpinFrame = requestAnimationFrame(rotate);
+    });
+  }
+
+  if (heroVisual && !isTouch && !reduceMotion) {
     heroVisual.addEventListener('mousemove', (e) => {
       const rect = heroVisual.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      laptop.style.setProperty('--ry', (x * 16 + 10) + 'deg');
-      laptop.style.setProperty('--rx', (-y * 12 - 6) + 'deg');
+      if (laptop) {
+        laptop.style.setProperty('--ry', (x * 16 + 10) + 'deg');
+        laptop.style.setProperty('--rx', (-y * 12 - 6) + 'deg');
+      }
 
-      cursorGlow.style.transform = `translate(${e.clientX - rect.left - 130}px, ${e.clientY - rect.top - 130}px)`;
+      if (cursorGlow) {
+        cursorGlow.style.transform = `translate(${e.clientX - rect.left - 130}px, ${e.clientY - rect.top - 130}px)`;
+      }
 
       badges.forEach((b, i) => {
         const factor = 10 + i * 6;
@@ -881,16 +1165,18 @@
       });
     });
     heroVisual.addEventListener('mouseleave', () => {
-      laptop.style.setProperty('--ry', '10deg');
-      laptop.style.setProperty('--rx', '-8deg');
-      cursorGlow.style.transform = 'translate(-1000px,-1000px)';
+      if (laptop) {
+        laptop.style.setProperty('--ry', '10deg');
+        laptop.style.setProperty('--rx', '-8deg');
+      }
+      if (cursorGlow) cursorGlow.style.transform = 'translate(-1000px,-1000px)';
       badges.forEach(b => b.style.transform = 'translate(0,0)');
     });
   }
 
-  /* Ambient particle field */
+  /* Ambient golden & sugar dust particle field */
   const canvas = document.getElementById('particles');
-  if (canvas && !reduceMotion && window.innerWidth > 640) {
+  if (canvas && heroVisual && !reduceMotion && window.innerWidth > 640) {
     const ctx = canvas.getContext('2d');
     let w, h, particles;
 
@@ -899,13 +1185,14 @@
       h = canvas.height = heroVisual.clientHeight;
     }
     function init() {
-      particles = Array.from({ length: 34 }, () => ({
+      particles = Array.from({ length: 36 }, (_, i) => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        r: Math.random() * 1.4 + 0.4,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
-        a: Math.random() * 0.5 + 0.15
+        r: Math.random() * 1.5 + 0.4,
+        vx: (Math.random() - 0.5) * 0.14,
+        vy: (Math.random() - 0.5) * 0.14,
+        a: Math.random() * 0.55 + 0.15,
+        isGold: i % 2 === 0
       }));
     }
     function tick() {
@@ -916,7 +1203,7 @@
         if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(140,170,255,${p.a})`;
+        ctx.fillStyle = p.isGold ? `rgba(229,169,88,${p.a})` : `rgba(255,235,205,${p.a})`;
         ctx.fill();
       });
       requestAnimationFrame(tick);
@@ -1306,8 +1593,8 @@
       updatePower();
     }
   }
+})();
 </script>
-
-  <script src="js/script.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
